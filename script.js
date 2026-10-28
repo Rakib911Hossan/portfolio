@@ -308,12 +308,12 @@ function initChrome() {
 /* ---------------- boot ---------------- */
 
 (async function main() {
-  initChrome();
   const [profile, scholar, orcid] = await Promise.all([
     load('data/profile.json'), load('data/scholar.json'), load('data/orcid.json'),
   ]);
   if (!profile) {
     $('#app').innerHTML = '<p class="note" style="padding:4rem 0">Could not load data/profile.json. Serve this folder over HTTP (e.g. <code>python3 -m http.server</code>) rather than opening the file directly.</p>';
+    initChrome();
     return;
   }
   renderHero(profile);
@@ -323,6 +323,8 @@ function initChrome() {
   renderPublications(profile, scholar, orcid);
   renderProjects(profile);
   renderSkills(profile);
+  // Start scroll-spy/reveal only once sections have their real height
+  initChrome();
   renderStats(profile, scholar, null);
   if (scholar?.updated) $('#updated').textContent = `Data synced ${new Date(scholar.updated).toLocaleDateString('en', { dateStyle: 'medium' })}`;
 
