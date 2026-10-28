@@ -1,13 +1,13 @@
 {
   "name": "Rakib Hossan",
-  "position": "AI Engineer & Researcher",
+  "position": "AI Researcher & Engineer",
   "location": "Dhaka, Bangladesh",
   "photo": "assets/rakib.jpg",
   "cv": null,
   "email": "rakib911hossan@gmail.com",
   "availability": "🎓 Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
   "lead": "I work on <strong>large language models</strong> and <strong>natural language processing</strong> — how to make AI systems reason better, stay grounded in evidence, and work reliably across languages, speech, and real-world data.",
-  "bio": "I'm currently an AI Engineer at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, building LLM systems end to end — from retrieval and generation to evaluation and reliability. I'm also finishing my B.Sc. in Computer Science &amp; Engineering at BUBT (CGPA 4.00). Before computer science, I spent several years at sea as a marine engineer on VLCC super tankers — which taught me to care a lot about systems that must not fail.",
+  "bio": "I'm currently an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working with a small research team on Bangla medical speech recognition, medical prescription understanding, and agentic test-time reinforcement learning. I'm also finishing my B.Sc. in Computer Science &amp; Engineering at BUBT (CGPA 4.00). Before computer science, I spent several years at sea as a marine engineer on VLCC super tankers — which taught me to care a lot about systems that must not fail.",
   "links": {
     "github": "Rakib911Hossan",
     "scholar": "-NhjHp8AAAAJ",
@@ -22,6 +22,11 @@
           "label": "Evidence Claim Pipeline",
           "url": "#projects",
           "venue": "thesis, ongoing"
+        },
+        {
+          "label": "Agentic TTRL",
+          "url": "#projects",
+          "venue": "ongoing"
         },
         {
           "label": "LLM natural language inference",
@@ -52,11 +57,21 @@
           "label": "Bangla Dialectal Medical ASR Benchmark",
           "url": "#projects",
           "venue": "ongoing"
+        },
+        {
+          "label": "Medical prescription understanding",
+          "url": "#projects",
+          "venue": "ongoing"
         }
       ]
     }
   ],
   "news": [
+    {
+      "date": "2026-10",
+      "icon": "🔬",
+      "html": "Now working mainly as a <strong>researcher</strong> on the Penta AI team: Bangla medical speech, medical prescriptions, and agentic test-time RL."
+    },
     {
       "date": "2026-04",
       "icon": "🚀",
@@ -75,15 +90,14 @@
   ],
   "experience": [
     {
-      "role": "Software → AI Engineer",
+      "role": "AI Researcher",
       "org": "Penta Global Ltd.",
       "url": "https://www.pentabd.com/",
       "dates": "Apr 2024 – Present",
       "where": "Dhaka",
       "points": [
-        "Design LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents.",
-        "Apply RAG, majority-vote consensus across repeated generations, and LLM-judge quality scoring to reduce hallucination.",
-        "Debug and validate each stage against real documents, tracking failure modes to keep design decisions evidence-based.",
+        "Research on Bangla dialectal medical speech recognition, medical prescription understanding, and agentic test-time reinforcement learning (TTRL), with a five-person research team.",
+        "Designed LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents, using RAG, majority-vote consensus, and LLM-judge scoring to reduce hallucination.",
         "Previously Software Engineer (Apr 2024 – Mar 2026), building enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
     },
@@ -91,7 +105,7 @@
       "role": "AI Engineer",
       "org": "AVNBD",
       "url": "https://avnbd.org/",
-      "dates": "Aug 2026 – Present",
+      "dates": "Aug 2026 – Nov 2026",
       "where": "Dhaka",
       "points": [
         "Built a multi-stage LLM pipeline to extract, structure, and translate a large-scale human-rights dataset from a scanned Bangla source.",
@@ -178,9 +192,21 @@
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
     {
+      "tag": "Reasoning & Agents",
+      "title": "Agentic Test-Time Reinforcement Learning",
+      "text": "Applying test-time reinforcement learning (TTRL) to LLM agents, so they can keep improving on new, unlabeled tasks using their own consensus as a reward signal.",
+      "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
+    },
+    {
       "tag": "Speech & Clinical AI",
       "title": "Bangla Dialectal Medical ASR Benchmark",
       "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
+      "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
+    },
+    {
+      "tag": "Speech & Clinical AI",
+      "title": "Medical Prescription Understanding",
+      "text": "Reading and structuring medical prescriptions with AI, so that drug names, dosages, and instructions can be extracted reliably.",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
     {
