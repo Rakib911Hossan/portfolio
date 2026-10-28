@@ -223,14 +223,14 @@
       "role": "Graduate Research Assistant, UMBC"
     },
     {
-      "name": "Mir Sazzat Hossain",
-      "url": "https://mirsazzathossain.me/",
-      "role": "Research Assistant, CCDS, IUB"
-    },
-    {
       "name": "MD Fahim",
       "url": "https://md-fahim.github.io/",
       "role": "Alumni Research Assistant, CCDS, IUB"
+    },
+    {
+      "name": "Mir Sazzat Hossain",
+      "url": "https://mirsazzathossain.me/",
+      "role": "Research Assistant, CCDS, IUB"
     }
   ],
   "_repoDescriptions": "Which repos show (and their order) comes from your pinned repos on GitHub. These only fill in descriptions for repos that have none on GitHub.",
