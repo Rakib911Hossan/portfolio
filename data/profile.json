@@ -164,7 +164,7 @@
       ],
       "links": {
         "Paper": "https://aclanthology.org/2025.banglalp-1.35/",
-        "PDF": "https://openreview.net/pdf?id=o6DlnHNMjv",
+        "PDF": "https://aclanthology.org/2025.banglalp-1.35.pdf",
         "Code": "https://github.com/Rakib911Hossan/PromptGuard"
       },
       "abstract": "A prompt-based, few-shot framework for Bengali hate speech detection that combines LLM classification with majority voting across repeated generations and keyword-similarity signals, targeting reliable predictions in a low-resource language setting."
