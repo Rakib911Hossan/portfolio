@@ -63,18 +63,15 @@ function renderHero(p) {
   externalize($('#about'));
 }
 
-function renderStats(p, scholar, gh) {
+function renderStats(p, scholar) {
   const s = scholar?.stats || {};
   const papers = Math.max(p.publications.length, scholar?.publications?.length || 0);
-  const repos = gh?.repos?.length || gh?.profile?.public_repos;
   const plural = (n, word) => `${word}${n === 1 ? '' : 's'}`;
-  // Citation metrics appear automatically once they're large enough to help rather than hurt
-  const showCites = (s.citations || 0) >= 10;
+  // Scholar metrics, refreshed daily by the updater
   const items = [
     [papers, plural(papers, 'paper')],
-    showCites && [s.citations, plural(s.citations, 'citation')],
-    showCites && [s.h_index, 'h-index'],
-    repos && [repos, plural(repos, 'repo')],
+    s.citations != null && [s.citations, plural(s.citations, 'citation')],
+    s.h_index != null && [s.h_index, 'h-index'],
   ].filter(Boolean);
   $('#stats').style.gridTemplateColumns = `repeat(${items.length}, 1fr)`;
   $('#stats').innerHTML = items.map(([n, l]) =>
@@ -347,10 +344,9 @@ function initChrome() {
   renderMentors(profile);
   // Start scroll-spy/reveal only once sections have their real height
   initChrome();
-  renderStats(profile, scholar, null);
+  renderStats(profile, scholar);
   if (scholar?.updated) $('#updated').textContent = `Data synced ${new Date(scholar.updated).toLocaleDateString('en', { dateStyle: 'medium' })}`;
 
   const gh = await loadGithub(profile.links.github);
   renderRepos(profile, gh);
-  renderStats(profile, scholar, gh);
 })();
