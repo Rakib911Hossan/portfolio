@@ -65,12 +65,18 @@ function renderHero(p) {
 
 function renderStats(p, scholar, gh) {
   const s = scholar?.stats || {};
+  const papers = Math.max(p.publications.length, scholar?.publications?.length || 0);
+  const repos = gh?.repos?.length || gh?.profile?.public_repos;
+  const plural = (n, word) => `${word}${n === 1 ? '' : 's'}`;
+  // Citation metrics appear automatically once they're large enough to help rather than hurt
+  const showCites = (s.citations || 0) >= 10;
   const items = [
-    [p.publications.length, 'papers'],
-    [s.citations ?? '—', 'citations'],
-    [s.h_index ?? '—', 'h-index'],
-    [gh?.repos?.length || gh?.profile?.public_repos || '—', 'repos'],
-  ];
+    [papers, plural(papers, 'paper')],
+    showCites && [s.citations, plural(s.citations, 'citation')],
+    showCites && [s.h_index, 'h-index'],
+    repos && [repos, plural(repos, 'repo')],
+  ].filter(Boolean);
+  $('#stats').style.gridTemplateColumns = `repeat(${items.length}, 1fr)`;
   $('#stats').innerHTML = items.map(([n, l]) =>
     `<div><b>${esc(n)}</b><span>${l}</span></div>`).join('');
 }
@@ -268,8 +274,13 @@ function renderRepos(p, gh) {
 function renderSkills(p) {
   $('#skillList').innerHTML = p.skills.map((s) =>
     `<div><dt>${esc(s.group)}</dt><dd>${s.items.map((i) => `<span class="pill">${esc(i)}</span>`).join('')}</dd></div>`).join('');
-  $('#certs').innerHTML = p.certifications.map((c) =>
-    `<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a><span>${esc(c.issuer)} · ${esc(c.date)}</span></li>`).join('');
+  // Certificates as one compact line: "Coursera · DeepLearning.AI (2026): ML · DL · NLP Specializations"
+  const certs = [...p.certifications].reverse();
+  if (!certs.length) { $('#certs').innerHTML = ''; return; }
+  const short = (n) => n.replace(/ Specialization$/, '').replace('Natural Language Processing', 'NLP');
+  const years = [...new Set(certs.map((c) => c.date.slice(-4)))].join('–');
+  $('#certs').innerHTML = `<li class="cert-line"><span>Coursera · ${esc(certs[0].issuer)} (${esc(years)})</span>
+    ${certs.map((c) => `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(short(c.name))}</a>`).join(' · ')} Specializations</li>`;
 }
 
 /* ---------------- UI chrome ---------------- */

@@ -16,27 +16,17 @@
   },
   "focus": [
     {
-      "title": "LLM Reasoning",
+      "title": "Reasoning & Claim Verification",
       "work": [
         {
           "label": "Evidence Claim Pipeline",
           "url": "#projects",
-          "venue": "Thesis, ongoing"
-        }
-      ]
-    },
-    {
-      "title": "Trustworthy & Reliable AI",
-      "work": [
-        {
-          "label": "PromptGuard",
-          "url": "https://aclanthology.org/2025.banglalp-1.35/",
-          "venue": "AACL 2025"
+          "venue": "thesis, ongoing"
         },
         {
-          "label": "Evidence Claim Pipeline",
-          "url": "#projects",
-          "venue": "ongoing"
+          "label": "LLM natural language inference",
+          "url": "https://github.com/Rakib911Hossan/abductive_reasoning",
+          "venue": "Qwen3-8B"
         }
       ]
     },
@@ -46,7 +36,7 @@
         {
           "label": "PromptGuard",
           "url": "https://aclanthology.org/2025.banglalp-1.35/",
-          "venue": "AACL 2025"
+          "venue": "BLP @ AACL 2025"
         },
         {
           "label": "Human-Rights Dataset Extraction",
@@ -56,10 +46,10 @@
       ]
     },
     {
-      "title": "Speech & Applied AI",
+      "title": "Speech & Clinical AI",
       "work": [
         {
-          "label": "Bangla Medical ASR Benchmark",
+          "label": "Bangla Dialectal Medical ASR Benchmark",
           "url": "#projects",
           "venue": "ongoing"
         }
@@ -85,36 +75,27 @@
   ],
   "experience": [
     {
-      "role": "AI Engineer",
+      "role": "Software → AI Engineer",
       "org": "Penta Global Ltd.",
       "url": "https://www.pentabd.com/",
-      "dates": "Apr 2026 – Present",
+      "dates": "Apr 2024 – Present",
       "where": "Dhaka",
       "points": [
         "Design LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents.",
         "Apply RAG, majority-vote consensus across repeated generations, and LLM-judge quality scoring to reduce hallucination.",
-        "Debug and validate each stage against real documents, tracking failure modes to keep design decisions evidence-based."
+        "Debug and validate each stage against real documents, tracking failure modes to keep design decisions evidence-based.",
+        "Previously Software Engineer (Apr 2024 – Mar 2026), building enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
     },
     {
       "role": "AI Engineer",
       "org": "AVNBD",
       "url": "https://avnbd.org/",
-      "dates": "Present",
+      "dates": "Aug 2026 – Present",
       "where": "Dhaka",
       "points": [
         "Built a multi-stage LLM pipeline to extract, structure, and translate a large-scale human-rights dataset from a scanned Bangla source.",
         "Cross-referenced extracted records against an independent third-party dataset to validate accuracy."
-      ]
-    },
-    {
-      "role": "Software Engineer",
-      "org": "Penta Global Ltd.",
-      "url": "https://www.pentabd.com/",
-      "dates": "Apr 2024 – Mar 2026",
-      "where": "Dhaka",
-      "points": [
-        "Enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
     },
     {
@@ -160,11 +141,6 @@
       "degree": "Pre-Sea Training in Marine Engineering",
       "school": "United Marine Academy",
       "meta": "2012 – 2014 · CGPA 3.66"
-    },
-    {
-      "degree": "HSC (Science)",
-      "school": "Dhaka College",
-      "meta": "2012 · GPA 5.00"
     }
   ],
   "background": [
@@ -179,7 +155,7 @@
       "title": "PromptGuard at BLP-2025 Task 1: A Few-Shot Classification Framework Using Majority Voting and Keyword Similarity for Bengali Hate Speech Detection",
       "authors": "<b>Rakib Hossan</b>, <a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>",
       "venue": "Proceedings of the BLP Workshop @ AACL-IJCNLP 2025",
-      "badge": "AACL-IJCNLP",
+      "badge": "BLP @ AACL",
       "year": 2025,
       "tags": [
         "LLMs",
@@ -196,13 +172,13 @@
   ],
   "projects": [
     {
-      "tag": "LLM Reasoning",
+      "tag": "Reasoning & Claim Verification",
       "title": "Evidence Claim Pipeline (Thesis)",
       "text": "A system that extracts claims from scientific papers and reasons about the evidence and premises behind them, using claim verification and abductive reasoning with LLMs.",
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
     {
-      "tag": "Speech & Applied AI",
+      "tag": "Speech & Clinical AI",
       "title": "Bangla Dialectal Medical ASR Benchmark",
       "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
@@ -216,7 +192,7 @@
   ],
   "_repoDescriptions": "Which repos show (and their order) comes from your pinned repos on GitHub. These only fill in descriptions for repos that have none on GitHub.",
   "repoDescriptions": {
-    "PromptGuard": "Code for our AACL-IJCNLP 2025 paper: few-shot LLM classification with majority voting and keyword similarity for Bengali hate speech detection.",
+    "PromptGuard": "Code for our BLP-2025 shared-task paper (AACL-IJCNLP 2025 workshop): few-shot LLM classification with majority voting and keyword similarity for Bengali hate speech detection.",
     "abductive_reasoning": "Natural language inference experiments with Qwen3-8B, exploring how LLMs reason about premises and hypotheses.",
     "ml-penta": "Retrieval-augmented generation (RAG) and RoBERTa fine-tuning experiments.",
     "transformers_architechture_3D_view": "Interactive 3D visualization of how a Transformer processes a sentence, stage by stage. React + Three.js.",
@@ -225,57 +201,35 @@
   },
   "skills": [
     {
-      "group": "ML & NLP",
-      "items": [
-        "CNNs",
-        "RNNs/LSTMs",
-        "Transformers",
-        "Text classification",
-        "Few-shot learning",
-        "Word embeddings"
-      ]
-    },
-    {
       "group": "LLM research",
       "items": [
-        "RAG",
-        "Prompt engineering",
-        "Abductive reasoning",
-        "LLM-as-judge evaluation"
+        "LLM evaluation (LLM-as-judge)",
+        "Retrieval-augmented generation",
+        "Prompting & few-shot learning",
+        "Self-consistency / majority voting",
+        "Natural language inference",
+        "Text classification"
       ]
     },
     {
-      "group": "Frameworks",
-      "items": [
-        "PyTorch",
-        "TensorFlow",
-        "Keras",
-        "Hugging Face Transformers",
-        "scikit-learn",
-        "Pandas",
-        "NLTK"
-      ]
-    },
-    {
-      "group": "Languages",
+      "group": "ML stack",
       "items": [
         "Python",
-        "Java (Spring Boot)",
-        "TypeScript (NestJS)",
-        "C/C++",
-        "Flutter"
+        "PyTorch",
+        "Hugging Face Transformers",
+        "TensorFlow",
+        "scikit-learn",
+        "Pandas"
       ]
     },
     {
-      "group": "Backend & DevOps",
+      "group": "Engineering",
       "items": [
-        "PostgreSQL",
-        "Redis",
-        "RabbitMQ",
-        "Keycloak",
+        "Java (Spring Boot)",
+        "TypeScript",
         "Docker",
-        "CI/CD",
-        "Microservices"
+        "PostgreSQL",
+        "CI/CD"
       ]
     }
   ],
