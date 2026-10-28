@@ -216,6 +216,23 @@
       "collab": "<a href=\"https://avnbd.org/\">AVNBD</a>"
     }
   ],
+  "mentors": [
+    {
+      "name": "Shubhashis Roy Dipta",
+      "url": "https://roydipta.com/",
+      "role": "Graduate Research Assistant, UMBC"
+    },
+    {
+      "name": "Mir Sazzat Hossain",
+      "url": "https://mirsazzathossain.me/",
+      "role": "Research Assistant, CCDS, IUB"
+    },
+    {
+      "name": "MD Fahim",
+      "url": "https://md-fahim.github.io/",
+      "role": "Alumni Research Assistant, CCDS, IUB"
+    }
+  ],
   "_repoDescriptions": "Which repos show (and their order) comes from your pinned repos on GitHub. These only fill in descriptions for repos that have none on GitHub.",
   "repoDescriptions": {
     "PromptGuard": "Code for our BLP-2025 shared-task paper (AACL-IJCNLP 2025 workshop): few-shot LLM classification with majority voting and keyword similarity for Bengali hate speech detection.",
@@ -225,39 +242,14 @@
     "securegate-ai-pentest": "Secure auth portal with a multi-agent security validation suite: five agents (SQLi, XSS, CSRF, lockout, headers) test whether each defense holds.",
     "fastapi-react-ml-platform": "Full-stack ML inference platform: submit text or images, track jobs in real time over WebSockets. FastAPI, PostgreSQL, Hugging Face, React."
   },
-  "skills": [
-    {
-      "group": "LLM research",
-      "items": [
-        "LLM evaluation (LLM-as-judge)",
-        "Retrieval-augmented generation",
-        "Prompting & few-shot learning",
-        "Self-consistency / majority voting",
-        "Natural language inference",
-        "Text classification"
-      ]
-    },
-    {
-      "group": "ML stack",
-      "items": [
-        "Python",
-        "PyTorch",
-        "Hugging Face Transformers",
-        "TensorFlow",
-        "scikit-learn",
-        "Pandas"
-      ]
-    },
-    {
-      "group": "Engineering",
-      "items": [
-        "Java (Spring Boot)",
-        "TypeScript",
-        "Docker",
-        "PostgreSQL",
-        "CI/CD"
-      ]
-    }
+  "tools": [
+    "Python",
+    "PyTorch",
+    "Hugging Face Transformers",
+    "TensorFlow",
+    "scikit-learn",
+    "Pandas",
+    "Docker"
   ],
   "certifications": [
     {

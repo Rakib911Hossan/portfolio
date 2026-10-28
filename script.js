@@ -271,16 +271,26 @@ function renderRepos(p, gh) {
   $('#ghNote').innerHTML = `See all ${count ? count + ' ' : ''}repositories on <a href="https://github.com/${esc(user)}" target="_blank" rel="noopener">github.com/${esc(user)}</a>.`;
 }
 
-function renderSkills(p) {
-  $('#skillList').innerHTML = p.skills.map((s) =>
-    `<div><dt>${esc(s.group)}</dt><dd>${s.items.map((i) => `<span class="pill">${esc(i)}</span>`).join('')}</dd></div>`).join('');
-  // Certificates as one compact line: "Coursera · DeepLearning.AI (2026): ML · DL · NLP Specializations"
+// Tools and certificates as quiet one-liners under Education (researchers don't need a skills section)
+function renderTools(p) {
+  const lines = [];
+  if (p.tools?.length) lines.push(`<li class="cert-line"><span>Tools</span>${p.tools.map(esc).join(' · ')}</li>`);
   const certs = [...p.certifications].reverse();
-  if (!certs.length) { $('#certs').innerHTML = ''; return; }
-  const short = (n) => n.replace(/ Specialization$/, '').replace('Natural Language Processing', 'NLP');
-  const years = [...new Set(certs.map((c) => c.date.slice(-4)))].join('–');
-  $('#certs').innerHTML = `<li class="cert-line"><span>Coursera · ${esc(certs[0].issuer)} (${esc(years)})</span>
-    ${certs.map((c) => `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(short(c.name))}</a>`).join(' · ')} Specializations</li>`;
+  if (certs.length) {
+    const short = (n) => n.replace(/ Specialization$/, '').replace('Natural Language Processing', 'NLP');
+    const years = [...new Set(certs.map((c) => c.date.slice(-4)))].join('–');
+    lines.push(`<li class="cert-line"><span>Coursera · ${esc(certs[0].issuer)} (${esc(years)})</span>
+      ${certs.map((c) => `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(short(c.name))}</a>`).join(' · ')} Specializations</li>`);
+  }
+  $('#certs').innerHTML = lines.join('');
+}
+
+function renderMentors(p) {
+  const list = p.mentors || [];
+  $('#mentors').previousElementSibling.hidden = !list.length;
+  $('#mentors').innerHTML = list.map((m) =>
+    `<li><a href="${esc(m.url)}">${esc(m.name)}</a><span>${esc(m.role)}</span></li>`).join('');
+  externalize($('#mentors'));
 }
 
 /* ---------------- UI chrome ---------------- */
@@ -333,7 +343,8 @@ function initChrome() {
   renderExperience(profile);
   renderPublications(profile, scholar, orcid);
   renderProjects(profile);
-  renderSkills(profile);
+  renderTools(profile);
+  renderMentors(profile);
   // Start scroll-spy/reveal only once sections have their real height
   initChrome();
   renderStats(profile, scholar, null);
