@@ -1,7 +1,7 @@
 {
   "profile": {
     "login": "Rakib911Hossan",
-    "public_repos": 26,
+    "public_repos": 27,
     "followers": 5,
     "html_url": "https://github.com/Rakib911Hossan"
   },
@@ -14,6 +14,16 @@
     "securegate-ai-pentest"
   ],
   "repos": [
+    {
+      "name": "portfolio",
+      "url": "https://github.com/Rakib911Hossan/portfolio",
+      "description": "Personal research portfolio — rakibhossan.com",
+      "language": "CSS",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-10-28T09:15:18Z",
+      "topics": []
+    },
     {
       "name": "securegate-ai-pentest",
       "url": "https://github.com/Rakib911Hossan/securegate-ai-pentest",
@@ -278,5 +288,5 @@
       "topics": []
     }
   ],
-  "updated": "2026-10-27T16:41:32+00:00"
+  "updated": "2026-10-28T09:15:43+00:00"
 }
