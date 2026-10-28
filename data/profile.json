@@ -8,41 +8,88 @@
   "availability": "🎓 Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
   "lead": "I work on <strong>large language models</strong> and <strong>natural language processing</strong> — how to make AI systems reason better, stay grounded in evidence, and work reliably across languages, speech, and real-world data.",
   "bio": "I'm currently an AI Engineer at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, building LLM systems end to end — from retrieval and generation to evaluation and reliability. I'm also finishing my B.Sc. in Computer Science &amp; Engineering at BUBT (CGPA 4.00). Before computer science, I spent several years at sea as a marine engineer on VLCC super tankers — which taught me to care a lot about systems that must not fail.",
-
   "links": {
     "github": "Rakib911Hossan",
     "scholar": "-NhjHp8AAAAJ",
     "linkedin": "rakib-hossan-b15115133",
     "orcid": "0009-0006-9831-8085"
   },
-
   "focus": [
-    { "title": "LLM Reasoning", "work": [
-      { "label": "Evidence Claim Pipeline", "url": "#projects", "venue": "Thesis, ongoing" }
-    ] },
-    { "title": "Trustworthy & Reliable AI", "work": [
-      { "label": "PromptGuard", "url": "https://aclanthology.org/2025.banglalp-1.35/", "venue": "AACL 2025" },
-      { "label": "Evidence Claim Pipeline", "url": "#projects", "venue": "ongoing" }
-    ] },
-    { "title": "Multilingual & Low-Resource NLP", "work": [
-      { "label": "PromptGuard", "url": "https://aclanthology.org/2025.banglalp-1.35/", "venue": "AACL 2025" },
-      { "label": "Human-Rights Dataset Extraction", "url": "#projects", "venue": "AVNBD" }
-    ] },
-    { "title": "Speech & Applied AI", "work": [
-      { "label": "Bangla Medical ASR Benchmark", "url": "#projects", "venue": "ongoing" }
-    ] }
+    {
+      "title": "LLM Reasoning",
+      "work": [
+        {
+          "label": "Evidence Claim Pipeline",
+          "url": "#projects",
+          "venue": "Thesis, ongoing"
+        }
+      ]
+    },
+    {
+      "title": "Trustworthy & Reliable AI",
+      "work": [
+        {
+          "label": "PromptGuard",
+          "url": "https://aclanthology.org/2025.banglalp-1.35/",
+          "venue": "AACL 2025"
+        },
+        {
+          "label": "Evidence Claim Pipeline",
+          "url": "#projects",
+          "venue": "ongoing"
+        }
+      ]
+    },
+    {
+      "title": "Multilingual & Low-Resource NLP",
+      "work": [
+        {
+          "label": "PromptGuard",
+          "url": "https://aclanthology.org/2025.banglalp-1.35/",
+          "venue": "AACL 2025"
+        },
+        {
+          "label": "Human-Rights Dataset Extraction",
+          "url": "#projects",
+          "venue": "AVNBD"
+        }
+      ]
+    },
+    {
+      "title": "Speech & Applied AI",
+      "work": [
+        {
+          "label": "Bangla Medical ASR Benchmark",
+          "url": "#projects",
+          "venue": "ongoing"
+        }
+      ]
+    }
   ],
-
   "news": [
-    { "date": "2026-04", "icon": "🚀", "html": "Moved into an <strong>AI Engineer</strong> role at Penta Global Ltd., building LLM pipelines for scientific claim extraction and evidence grounding." },
-    { "date": "2026-04", "icon": "🎓", "html": "Completed three DeepLearning.AI specializations: <a href=\"https://www.coursera.org/account/accomplishments/specialization/XMKAPHUMMHVB\">Machine Learning</a>, <a href=\"https://www.coursera.org/account/accomplishments/specialization/9ME2UUUP5Z7C\">Deep Learning</a>, and <a href=\"https://www.coursera.org/account/accomplishments/specialization/H6KVV0WMY6SE\">NLP</a>." },
-    { "date": "2025-12", "icon": "📄", "html": "First-author paper <strong>PromptGuard</strong> presented at the BLP Workshop, <strong>AACL-IJCNLP 2025</strong>. <a href=\"https://aclanthology.org/2025.banglalp-1.35/\">Paper →</a>" }
+    {
+      "date": "2026-04",
+      "icon": "🚀",
+      "html": "Moved into an <strong>AI Engineer</strong> role at Penta Global Ltd., building LLM pipelines for scientific claim extraction and evidence grounding."
+    },
+    {
+      "date": "2026-04",
+      "icon": "🎓",
+      "html": "Completed three DeepLearning.AI specializations: <a href=\"https://www.coursera.org/account/accomplishments/specialization/XMKAPHUMMHVB\">Machine Learning</a>, <a href=\"https://www.coursera.org/account/accomplishments/specialization/9ME2UUUP5Z7C\">Deep Learning</a>, and <a href=\"https://www.coursera.org/account/accomplishments/specialization/H6KVV0WMY6SE\">NLP</a>."
+    },
+    {
+      "date": "2025-12",
+      "icon": "📄",
+      "html": "First-author paper <strong>PromptGuard</strong> presented at the BLP Workshop, <strong>AACL-IJCNLP 2025</strong>. <a href=\"https://aclanthology.org/2025.banglalp-1.35/\">Paper →</a>"
+    }
   ],
-
   "experience": [
     {
-      "role": "AI Engineer", "org": "Penta Global Ltd.", "url": "https://www.pentabd.com/",
-      "dates": "Apr 2026 – Present", "where": "Dhaka",
+      "role": "AI Engineer",
+      "org": "Penta Global Ltd.",
+      "url": "https://www.pentabd.com/",
+      "dates": "Apr 2026 – Present",
+      "where": "Dhaka",
       "points": [
         "Design LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents.",
         "Apply RAG, majority-vote consensus across repeated generations, and LLM-judge quality scoring to reduce hallucination.",
@@ -50,43 +97,83 @@
       ]
     },
     {
-      "role": "AI Engineer", "org": "AVNBD", "url": "https://avnbd.org/",
-      "dates": "Present", "where": "Dhaka",
+      "role": "AI Engineer",
+      "org": "AVNBD",
+      "url": "https://avnbd.org/",
+      "dates": "Present",
+      "where": "Dhaka",
       "points": [
         "Built a multi-stage LLM pipeline to extract, structure, and translate a large-scale human-rights dataset from a scanned Bangla source.",
         "Cross-referenced extracted records against an independent third-party dataset to validate accuracy."
       ]
     },
     {
-      "role": "Software Engineer", "org": "Penta Global Ltd.", "url": "https://www.pentabd.com/",
-      "dates": "Apr 2024 – Mar 2026", "where": "Dhaka",
+      "role": "Software Engineer",
+      "org": "Penta Global Ltd.",
+      "url": "https://www.pentabd.com/",
+      "dates": "Apr 2024 – Mar 2026",
+      "where": "Dhaka",
       "points": [
         "Enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
     },
     {
-      "role": "Software Engineer", "org": "OpenCare", "url": "https://opencarebd.com/",
-      "dates": "Jun 2025 – Feb 2026", "where": "Hybrid",
+      "role": "Software Engineer",
+      "org": "OpenCare",
+      "url": "https://opencarebd.com/",
+      "dates": "Jun 2025 – Feb 2026",
+      "where": "Hybrid",
       "points": [
         "Institution management, Keycloak auth, MinIO file storage, Liquibase migrations, Dockerized deployment. <a href=\"https://github.com/Cipher-Text/opencare/blob/master/CONTRIBUTORS.md\">Contributors →</a>"
       ]
+    },
+    {
+      "role": "Junior Engineer",
+      "org": "MT. XIDI · Seacon Star",
+      "dates": "Mar 2022 – Jan 2023",
+      "where": "At sea",
+      "marine": true,
+      "points": [
+        "VLCC (Very Large Crude Carrier), GRT 160,000.",
+        "Maintained the main engine, generator (Yanmar), fresh water generator, boiler (MHI / MAC-90 B), and purifier systems."
+      ]
+    },
+    {
+      "role": "Engine Cadet",
+      "org": "ATLANTIC 1 · MT. ARTAVIL",
+      "dates": "Sep 2017 – Aug 2021",
+      "where": "At sea",
+      "marine": true,
+      "points": [
+        "Super tankers with Jhampur Group and NITC.",
+        "Maintained the main engine (incl. Mitsubishi 7UEC85LS), generator (Yanmar), fresh water generator, S/W treatment plant, purifier, firefighting equipment, and emergency machinery."
+      ]
     }
   ],
-
   "education": [
-    { "degree": "B.Sc. Engg. in Computer Science & Engineering", "school": "Bangladesh University of Business and Technology (BUBT)", "meta": "Apr 2023 – Jan 2027 · CGPA 4.00 / 4.00" },
-    { "degree": "Pre-Sea Training in Marine Engineering", "school": "United Marine Academy", "meta": "2012 – 2014 · CGPA 3.66" },
-    { "degree": "HSC (Science)", "school": "Dhaka College", "meta": "2012 · GPA 5.00" }
+    {
+      "degree": "B.Sc. Engg. in Computer Science & Engineering",
+      "school": "Bangladesh University of Business and Technology (BUBT)",
+      "meta": "Apr 2023 – Jan 2027 · CGPA 4.00 / 4.00"
+    },
+    {
+      "degree": "Pre-Sea Training in Marine Engineering",
+      "school": "United Marine Academy",
+      "meta": "2012 – 2014 · CGPA 3.66"
+    },
+    {
+      "degree": "HSC (Science)",
+      "school": "Dhaka College",
+      "meta": "2012 · GPA 5.00"
+    }
   ],
-
   "background": [
     {
-      "title": "Junior Engineer & Engine Cadet · Merchant Navy",
-      "meta": "Sep 2017 – Jan 2023 · VLCC & super tankers (MT. XIDI, ATLANTIC 1, MT. ARTAVIL)",
-      "html": "Before moving into computer science, I worked at sea maintaining main engines (incl. Mitsubishi 7UEC85LS), generators, boilers, purifiers, and emergency machinery — safety-critical, team-coordinated work that shapes how I think about building reliable AI systems."
+      "title": "From marine engineering to AI",
+      "meta": "Merchant Navy · 2017 – 2023",
+      "html": "Before computer science, I spent five years at sea as an engine cadet and junior engineer on VLCC super tankers — safety-critical, team-coordinated work where systems must not fail. That shapes how I think about building reliable AI."
     }
   ],
-
   "publications": [
     {
       "title": "PromptGuard at BLP-2025 Task 1: A Few-Shot Classification Framework Using Majority Voting and Keyword Similarity for Bengali Hate Speech Detection",
@@ -94,7 +181,11 @@
       "venue": "Proceedings of the BLP Workshop @ AACL-IJCNLP 2025",
       "badge": "AACL-IJCNLP",
       "year": 2025,
-      "tags": ["LLMs", "Trustworthy AI", "Multilingual NLP"],
+      "tags": [
+        "LLMs",
+        "Trustworthy AI",
+        "Multilingual NLP"
+      ],
       "links": {
         "Paper": "https://aclanthology.org/2025.banglalp-1.35/",
         "PDF": "https://openreview.net/pdf?id=o6DlnHNMjv",
@@ -103,25 +194,26 @@
       "abstract": "A prompt-based, few-shot framework for Bengali hate speech detection that combines LLM classification with majority voting across repeated generations and keyword-similarity signals, targeting reliable predictions in a low-resource language setting."
     }
   ],
-
   "projects": [
     {
-      "tag": "LLM Reasoning", "title": "Evidence Claim Pipeline (Thesis)",
+      "tag": "LLM Reasoning",
+      "title": "Evidence Claim Pipeline (Thesis)",
       "text": "A system that extracts claims from scientific papers and reasons about the evidence and premises behind them, using claim verification and abductive reasoning with LLMs.",
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
     {
-      "tag": "Speech & Applied AI", "title": "Bangla Dialectal Medical ASR Benchmark",
+      "tag": "Speech & Applied AI",
+      "title": "Bangla Dialectal Medical ASR Benchmark",
       "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
     {
-      "tag": "Multilingual NLP", "title": "Human-Rights Dataset Extraction",
+      "tag": "Multilingual NLP",
+      "title": "Human-Rights Dataset Extraction",
       "text": "Multi-stage LLM pipeline that turns a scanned Bangla source document into a structured, translated dataset, validated against an independent third-party dataset.",
       "collab": "<a href=\"https://avnbd.org/\">AVNBD</a>"
     }
   ],
-
   "_repoDescriptions": "Which repos show (and their order) comes from your pinned repos on GitHub. These only fill in descriptions for repos that have none on GitHub.",
   "repoDescriptions": {
     "PromptGuard": "Code for our AACL-IJCNLP 2025 paper: few-shot LLM classification with majority voting and keyword similarity for Bengali hate speech detection.",
@@ -131,18 +223,80 @@
     "securegate-ai-pentest": "Secure auth portal with a multi-agent security validation suite: five agents (SQLi, XSS, CSRF, lockout, headers) test whether each defense holds.",
     "fastapi-react-ml-platform": "Full-stack ML inference platform: submit text or images, track jobs in real time over WebSockets. FastAPI, PostgreSQL, Hugging Face, React."
   },
-
   "skills": [
-    { "group": "ML & NLP", "items": ["CNNs", "RNNs/LSTMs", "Transformers", "Text classification", "Few-shot learning", "Word embeddings"] },
-    { "group": "LLM research", "items": ["RAG", "Prompt engineering", "Abductive reasoning", "LLM-as-judge evaluation"] },
-    { "group": "Frameworks", "items": ["PyTorch", "TensorFlow", "Keras", "Hugging Face Transformers", "scikit-learn", "Pandas", "NLTK"] },
-    { "group": "Languages", "items": ["Python", "Java (Spring Boot)", "TypeScript (NestJS)", "C/C++", "Flutter"] },
-    { "group": "Backend & DevOps", "items": ["PostgreSQL", "Redis", "RabbitMQ", "Keycloak", "Docker", "CI/CD", "Microservices"] }
+    {
+      "group": "ML & NLP",
+      "items": [
+        "CNNs",
+        "RNNs/LSTMs",
+        "Transformers",
+        "Text classification",
+        "Few-shot learning",
+        "Word embeddings"
+      ]
+    },
+    {
+      "group": "LLM research",
+      "items": [
+        "RAG",
+        "Prompt engineering",
+        "Abductive reasoning",
+        "LLM-as-judge evaluation"
+      ]
+    },
+    {
+      "group": "Frameworks",
+      "items": [
+        "PyTorch",
+        "TensorFlow",
+        "Keras",
+        "Hugging Face Transformers",
+        "scikit-learn",
+        "Pandas",
+        "NLTK"
+      ]
+    },
+    {
+      "group": "Languages",
+      "items": [
+        "Python",
+        "Java (Spring Boot)",
+        "TypeScript (NestJS)",
+        "C/C++",
+        "Flutter"
+      ]
+    },
+    {
+      "group": "Backend & DevOps",
+      "items": [
+        "PostgreSQL",
+        "Redis",
+        "RabbitMQ",
+        "Keycloak",
+        "Docker",
+        "CI/CD",
+        "Microservices"
+      ]
+    }
   ],
-
   "certifications": [
-    { "name": "Natural Language Processing Specialization", "issuer": "DeepLearning.AI", "date": "Apr 2026", "url": "https://www.coursera.org/account/accomplishments/specialization/H6KVV0WMY6SE" },
-    { "name": "Deep Learning Specialization", "issuer": "DeepLearning.AI", "date": "Mar 2026", "url": "https://www.coursera.org/account/accomplishments/specialization/9ME2UUUP5Z7C" },
-    { "name": "Machine Learning Specialization", "issuer": "DeepLearning.AI", "date": "Feb 2026", "url": "https://www.coursera.org/account/accomplishments/specialization/XMKAPHUMMHVB" }
+    {
+      "name": "Natural Language Processing Specialization",
+      "issuer": "DeepLearning.AI",
+      "date": "Apr 2026",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/H6KVV0WMY6SE"
+    },
+    {
+      "name": "Deep Learning Specialization",
+      "issuer": "DeepLearning.AI",
+      "date": "Mar 2026",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/9ME2UUUP5Z7C"
+    },
+    {
+      "name": "Machine Learning Specialization",
+      "issuer": "DeepLearning.AI",
+      "date": "Feb 2026",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/XMKAPHUMMHVB"
+    }
   ]
 }

@@ -371,3 +371,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .sidecard .email { text-align: center; }
 .sidecard .quick-links { justify-content: center; }
 .sidecard .socials { justify-content: center; margin: 10px 0 0; }
+/* marine-engineering roles: anchor marker + muted rail to set them apart from CS/AI work */
+.exp > li.marine { border-left-color: var(--faint); }
+.exp > li.marine .exp-org { color: var(--text); }
+.exp > li.marine .exp-org::before { content: '⚓ '; }

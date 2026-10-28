@@ -102,7 +102,7 @@ function renderNews(p) {
 function renderExperience(p) {
   const LIMIT = 3;
   $('#experience').innerHTML = p.experience.map((e, i) => `
-    <li${i >= LIMIT ? ' hidden' : ''}>
+    <li${e.marine ? ' class="marine"' : ''}${i >= LIMIT ? ' hidden' : ''}>
       <details>
         <summary>
           <span class="exp-row"><span class="exp-org">${e.url ? `<a href="${esc(e.url)}">${esc(e.org)}</a>` : esc(e.org)}</span><span class="exp-where">${esc(e.where)}</span></span>
