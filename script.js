@@ -252,7 +252,7 @@ function renderRepos(p, gh) {
   const repos = [...pinned, ...rest].slice(0, 6);
   $('#repos').innerHTML = repos.length ? repos.map((r) => `
     <a class="card repo" href="${esc(r.url)}" target="_blank" rel="noopener">
-      <h3>${ICONS.github}${esc(r.name)}</h3>
+      <h3>${ICONS.github}<span>${esc(r.name).replace(/_/g, '_<wbr>')}</span></h3>
       <p>${esc(r.description || 'No description')}</p>
       <div class="repo-meta">
         ${r.language ? `<span><i class="lang-dot"></i>${esc(r.language)}</span>` : ''}

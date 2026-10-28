@@ -61,7 +61,7 @@ svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width:
 svg.fill { fill: currentColor; stroke: none; }
 h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 [hidden] { display: none !important; }
-.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 @media (max-width: 600px) { .wrap { padding: 0 16px; } }
 
 /* ---------- top bar ---------- */
@@ -110,7 +110,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 
 /* ---------- about: side card + intro ---------- */
 .about {
-  display: grid; grid-template-columns: 390px 1fr; gap: 44px; align-items: start;
+  display: grid; grid-template-columns: 390px 1fr; gap: 36px; align-items: start;
   padding: 40px 0 8px;
 }
 .sidecard {
@@ -291,7 +291,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .repo { color: var(--text); }
 .repo:hover { text-decoration: none; }
 .repo p { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
-.repo h3 { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 15px; word-break: break-all; }
+.repo h3 { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 15px; overflow-wrap: anywhere; }
 .repo h3 svg { color: var(--muted); }
 .repo-meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 14px; font-size: 12.5px; color: var(--faint); }
 .repo-meta span { display: inline-flex; align-items: center; gap: 5px; }
@@ -375,3 +375,8 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .exp > li.marine { border-left-color: var(--faint); }
 .exp > li.marine .exp-org { color: var(--text); }
 .exp > li.marine .exp-org::before { content: '⚓ '; }
+
+/* Justify the intro paragraphs on wide screens (as on roydipta.com); phones stay left-aligned */
+@media (min-width: 901px) {
+  .intro .lead, .intro .bio { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+}
