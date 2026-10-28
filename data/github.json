@@ -1,0 +1,282 @@
+{
+  "profile": {
+    "login": "Rakib911Hossan",
+    "public_repos": 26,
+    "followers": 5,
+    "html_url": "https://github.com/Rakib911Hossan"
+  },
+  "pinned": [
+    "PromptGuard",
+    "abductive_reasoning",
+    "ml-penta",
+    "transformers_architechture_3D_view",
+    "Emotion_Detection_hybrid_approch",
+    "securegate-ai-pentest"
+  ],
+  "repos": [
+    {
+      "name": "securegate-ai-pentest",
+      "url": "https://github.com/Rakib911Hossan/securegate-ai-pentest",
+      "description": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-10-15T11:46:57Z",
+      "topics": []
+    },
+    {
+      "name": "rakib911hossan",
+      "url": "https://github.com/Rakib911Hossan/rakib911hossan",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-08-23T22:32:55Z",
+      "topics": []
+    },
+    {
+      "name": "fastapi-react-ml-platform",
+      "url": "https://github.com/Rakib911Hossan/fastapi-react-ml-platform",
+      "description": null,
+      "language": "TypeScript",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-08-12T22:12:49Z",
+      "topics": []
+    },
+    {
+      "name": "transformers_architechture_3D_view",
+      "url": "https://github.com/Rakib911Hossan/transformers_architechture_3D_view",
+      "description": null,
+      "language": "JavaScript",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-08-09T09:35:07Z",
+      "topics": []
+    },
+    {
+      "name": "abductive_reasoning",
+      "url": "https://github.com/Rakib911Hossan/abductive_reasoning",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-06-20T04:55:23Z",
+      "topics": []
+    },
+    {
+      "name": "ml-penta",
+      "url": "https://github.com/Rakib911Hossan/ml-penta",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-06-17T08:48:14Z",
+      "topics": []
+    },
+    {
+      "name": "Emotion_Detection_hybrid_approch",
+      "url": "https://github.com/Rakib911Hossan/Emotion_Detection_hybrid_approch",
+      "description": "This project focuses on developing a machine learning model capable of classifying text into eight distinct emotion categories: joy, sadness, fear, anger, surprise, neutral, disgust, and shame.",
+      "language": "Jupyter Notebook",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2025-12-01T09:59:03Z",
+      "topics": []
+    },
+    {
+      "name": "Event_Sync_Solutions",
+      "url": "https://github.com/Rakib911Hossan/Event_Sync_Solutions",
+      "description": "Event management application (Desktop) for corporate world",
+      "language": "Java",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2025-11-26T05:40:13Z",
+      "topics": []
+    },
+    {
+      "name": "Al_Project",
+      "url": "https://github.com/Rakib911Hossan/Al_Project",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2025-11-08T10:56:57Z",
+      "topics": []
+    },
+    {
+      "name": "PromptGuard",
+      "url": "https://github.com/Rakib911Hossan/PromptGuard",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2025-09-29T02:23:47Z",
+      "topics": []
+    },
+    {
+      "name": "hate_speech_detection_demo",
+      "url": "https://github.com/Rakib911Hossan/hate_speech_detection_demo",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2025-09-04T22:33:18Z",
+      "topics": []
+    },
+    {
+      "name": "hate_speech_task_A_dataset_null_filled_with_qwen",
+      "url": "https://github.com/Rakib911Hossan/hate_speech_task_A_dataset_null_filled_with_qwen",
+      "description": null,
+      "language": null,
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2025-09-03T09:01:37Z",
+      "topics": []
+    },
+    {
+      "name": "python-basics",
+      "url": "https://github.com/Rakib911Hossan/python-basics",
+      "description": null,
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2025-08-08T06:19:00Z",
+      "topics": []
+    },
+    {
+      "name": "mcp-server-springboot",
+      "url": "https://github.com/Rakib911Hossan/mcp-server-springboot",
+      "description": "A Java Spring Boot backend server for the MCP project. It provides RESTful APIs for handling core functionalities and integrates OpenAI GPT for intelligent processing. Designed for scalability and easy integration with frontend applications.",
+      "language": "Java",
+      "stars": 2,
+      "forks": 0,
+      "pushed_at": "2025-07-03T08:51:44Z",
+      "topics": []
+    },
+    {
+      "name": "automation_testing",
+      "url": "https://github.com/Rakib911Hossan/automation_testing",
+      "description": " Automation Testing Project Developed a TypeScript-based end-to-end test automation framework using Playwright. Implemented the Page Object Model (POM) design pattern for better maintainability and scalability of test scripts. Configured reusable test fixtures, environment variables, and automated test flows to ensure consistent browser testing. ",
+      "language": "TypeScript",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2025-07-01T12:40:50Z",
+      "topics": []
+    },
+    {
+      "name": "MedHub",
+      "url": "https://github.com/Rakib911Hossan/MedHub",
+      "description": "A flutter based project with firebase for Managing and Tracking Medications with Doctors Consultation",
+      "language": "Dart",
+      "stars": 2,
+      "forks": 0,
+      "pushed_at": "2025-06-29T18:22:00Z",
+      "topics": []
+    },
+    {
+      "name": "node-puppet-app",
+      "url": "https://github.com/Rakib911Hossan/node-puppet-app",
+      "description": "A Node.js application  -used Express.js and EJS as the templating engine -followed the Puppet (MVC-like) structure",
+      "language": "JavaScript",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2025-04-09T05:19:16Z",
+      "topics": []
+    },
+    {
+      "name": "Spring_Boot_DTO_MySql",
+      "url": "https://github.com/Rakib911Hossan/Spring_Boot_DTO_MySql",
+      "description": "A project using DTO with MySql",
+      "language": null,
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2024-09-27T13:35:06Z",
+      "topics": []
+    },
+    {
+      "name": "Spring_Boot_Redis",
+      "url": "https://github.com/Rakib911Hossan/Spring_Boot_Redis",
+      "description": null,
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2024-09-05T07:46:15Z",
+      "topics": []
+    },
+    {
+      "name": "University_Management",
+      "url": "https://github.com/Rakib911Hossan/University_Management",
+      "description": "University_Management_Demo",
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2024-09-05T07:14:12Z",
+      "topics": []
+    },
+    {
+      "name": "JWT_Security",
+      "url": "https://github.com/Rakib911Hossan/JWT_Security",
+      "description": "JWT creation and validation",
+      "language": null,
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2024-08-31T17:32:06Z",
+      "topics": [
+        "spring-boot",
+        "spring-security"
+      ]
+    },
+    {
+      "name": "Flappy_Bird",
+      "url": "https://github.com/Rakib911Hossan/Flappy_Bird",
+      "description": "A console based game built with C programming language.",
+      "language": "C",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2024-08-27T01:57:40Z",
+      "topics": []
+    },
+    {
+      "name": "Map_Construct_Mysql",
+      "url": "https://github.com/Rakib911Hossan/Map_Construct_Mysql",
+      "description": null,
+      "language": "Java",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2024-08-21T08:28:26Z",
+      "topics": []
+    },
+    {
+      "name": "Spring-boot-JWT-",
+      "url": "https://github.com/Rakib911Hossan/Spring-boot-JWT-",
+      "description": "Sprint Boot JWT authentication and authorization",
+      "language": "Java",
+      "stars": 1,
+      "forks": 0,
+      "pushed_at": "2024-07-31T23:34:15Z",
+      "topics": []
+    },
+    {
+      "name": "Assessment",
+      "url": "https://github.com/Rakib911Hossan/Assessment",
+      "description": null,
+      "language": "C++",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2024-06-26T10:57:51Z",
+      "topics": []
+    },
+    {
+      "name": "Appco",
+      "url": "https://github.com/Rakib911Hossan/Appco",
+      "description": "This is flex layout with HTML,CSS",
+      "language": "CSS",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2023-05-31T05:38:53Z",
+      "topics": []
+    }
+  ],
+  "updated": "2026-10-27T16:41:32+00:00"
+}

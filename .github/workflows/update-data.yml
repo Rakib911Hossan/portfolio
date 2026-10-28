@@ -1,0 +1,38 @@
+name: Refresh Scholar / GitHub / ORCID data
+
+# Vercel redeploys on every push to main, so this job only needs to commit fresh data.
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily, 03:00 UTC (09:00 Dhaka)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch Google Scholar + GitHub + ORCID data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/update_data.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/scholar.json data/github.json data/orcid.json
+          # Only the "updated" timestamps changed? Skip the commit so Vercel doesn't redeploy for nothing.
+          if git diff --cached -U0 | grep '^[+-] ' | grep -qv '"updated":'; then
+            git commit -m "chore: refresh scholar/github/orcid data"
+            git push
+          else
+            echo "No content changes."
+          fi
