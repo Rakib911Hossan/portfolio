@@ -117,9 +117,10 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
   padding: 28px; box-shadow: var(--shadow);
 }
-.id { display: flex; gap: 18px; align-items: center; }
-.id img { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-soft); flex-shrink: 0; }
-.id h1 { white-space: nowrap; font: 800 28px/1.1 var(--serif); letter-spacing: -.01em; }
+.id { display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; }
+.id img { width: 184px; height: 184px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); flex-shrink: 0;
+  box-shadow: 0 0 0 3px var(--accent), 0 12px 28px -10px rgba(55, 48, 163, .45); }
+.id h1 { white-space: nowrap; font: 800 30px/1.1 var(--serif); letter-spacing: -.01em; }
 .position { margin: 8px 0 0; font-size: 15px; line-height: 1.45; color: var(--muted); }
 .email {
   display: block; margin: 20px 0 12px; padding-top: 16px; border-top: 1px solid var(--line);
@@ -187,7 +188,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   .about { grid-template-columns: 1fr; gap: 28px; padding-top: 24px; }
 }
 @media (max-width: 400px) {
-  .id img { width: 96px; height: 96px; }
+  .id img { width: 160px; height: 160px; }
   .id h1 { font-size: 26px; }
 }
 
@@ -364,5 +365,9 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 .sidecard .link-btn { font-size: 15px; }
-.location { display: flex; align-items: center; gap: 5px; margin: 4px 0 0; font-size: 14px; color: var(--faint); }
+.location { display: flex; align-items: center; justify-content: center; gap: 5px; margin: 4px 0 0; font-size: 14px; color: var(--faint); }
 .location svg { width: 15px; height: 15px; }
+/* centre the contact block under the stacked portrait */
+.sidecard .email { text-align: center; }
+.sidecard .quick-links { justify-content: center; }
+.sidecard .socials { justify-content: center; margin: 10px 0 0; }
