@@ -14,6 +14,9 @@
     // Apply saved theme before paint to avoid a flash
     try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
+  <!-- Vercel Web Analytics (cookieless; served by Vercel, 404s harmlessly on localhost) -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
