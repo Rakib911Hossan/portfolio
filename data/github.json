@@ -18,10 +18,10 @@
       "name": "portfolio",
       "url": "https://github.com/Rakib911Hossan/portfolio",
       "description": "Personal research portfolio — rakibhossan.com",
-      "language": "CSS",
+      "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "pushed_at": "2026-10-28T12:21:55Z",
+      "pushed_at": "2026-10-29T12:26:36Z",
       "topics": []
     },
     {
@@ -288,5 +288,5 @@
       "topics": []
     }
   ],
-  "updated": "2026-10-29T09:44:46+00:00"
+  "updated": "2026-10-29T12:26:44+00:00"
 }
