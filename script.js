@@ -1,7 +1,7 @@
-// Renders the whole page from data/*.json.
+// Renders the whole page from data/*.json. scripts/prerender.py runs this once in headless
+// Chrome to write index.html; in the browser it runs again to wire up the interactive bits.
 //   profile.json — hand-edited content (bio, experience, news, ...)
-//   scholar.json — auto-updated by scripts/update_data.py (GitHub Action)
-//   github.json  — same; the browser also tries the live GitHub API first
+//   scholar.json, github.json, orcid.json — refreshed daily by scripts/update_data.py (GitHub Action)
 
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -218,22 +218,8 @@ function renderProjects(p) {
   externalize($('#projectCards'));
 }
 
-// Live GitHub API first (always fresh), cached JSON as fallback (rate limits).
-// Pinned repos need GraphQL + a token, so they always come from the cached JSON.
-async function loadGithub(user) {
-  const cached = await load('data/github.json');
-  try {
-    const r = await fetch(`https://api.github.com/users/${user}/repos?per_page=100&sort=pushed`);
-    if (r.ok) {
-      const repos = (await r.json()).filter((x) => !x.fork && !x.archived).map((x) => ({
-        name: x.name, url: x.html_url, description: x.description, language: x.language,
-        stars: x.stargazers_count, forks: x.forks_count, pushed_at: x.pushed_at,
-      }));
-      return { ...cached, repos, live: true };
-    }
-  } catch { /* fall through */ }
-  return cached;
-}
+// Repos come from data/github.json, refreshed daily (pinned repos need GraphQL + a token)
+const loadGithub = () => load('data/github.json');
 
 function renderRepos(p, gh) {
   const user = p.links.github;
@@ -320,10 +306,11 @@ function initChrome() {
   }, { threshold: 0.08 });
   document.querySelectorAll('.section').forEach((s) => reveal.observe(s));
 
-  $('#year').textContent = new Date().getFullYear();
 }
 
 /* ---------------- boot ---------------- */
+
+const PRERENDER = new URLSearchParams(location.search).has('prerender');
 
 (async function main() {
   const [profile, scholar, orcid] = await Promise.all([
@@ -342,11 +329,11 @@ function initChrome() {
   renderProjects(profile);
   renderTools(profile);
   renderMentors(profile);
+  renderStats(profile, scholar);
+  renderRepos(profile, await loadGithub());
+  $('#year').textContent = new Date().getFullYear();
+  // scripts/prerender.py snapshots the page at this point; it wants plain, fully visible HTML
+  if (PRERENDER) { document.documentElement.classList.remove('js'); return; }
   // Start scroll-spy/reveal only once sections have their real height
   initChrome();
-  renderStats(profile, scholar);
-  if (scholar?.updated) $('#updated').textContent = `Data synced ${new Date(scholar.updated).toLocaleDateString('en', { dateStyle: 'medium' })}`;
-
-  const gh = await loadGithub(profile.links.github);
-  renderRepos(profile, gh);
 })();

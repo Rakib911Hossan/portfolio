@@ -184,9 +184,10 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 }
 
 /* ---------- sections ---------- */
-.section { padding: 64px 0 8px; opacity: 0; transform: translateY(14px); transition: opacity .6s, transform .6s; }
-.section.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .section { opacity: 1; transform: none; transition: none; } }
+.section { padding: 64px 0 8px; transition: opacity .6s, transform .6s; }
+/* Fade-in only when JS runs; the prerendered page stays fully visible without it */
+.js .section:not(.in) { opacity: 0; transform: translateY(14px); }
+@media (prefers-reduced-motion: reduce) { .js .section:not(.in) { opacity: 1; transform: none; } .section { transition: none; } }
 .section-title {
   display: flex; align-items: baseline; gap: 14px; font: 700 30px var(--serif);
   letter-spacing: -.01em; margin-bottom: 28px;

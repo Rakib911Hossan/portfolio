@@ -1,13 +1,21 @@
-name: Refresh Scholar / GitHub / ORCID data
+name: Refresh data and prerender
 
-# Vercel redeploys on every push to main, so this job only needs to commit fresh data.
+# Vercel redeploys on every push to main, so this job only needs to commit fresh data
+# and the regenerated index.html.
 on:
   schedule:
     - cron: "0 3 * * *"   # daily, 03:00 UTC (09:00 Dhaka)
+  push:
+    branches: [main]
+    paths: [data/profile.json, template.html, script.js, scripts/prerender.py]
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
 
 jobs:
   update:
@@ -24,14 +32,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 scripts/update_data.py
 
-      - name: Commit refreshed data
+      - name: Prerender index.html (Chrome is preinstalled on the runner)
+        run: python3 scripts/prerender.py
+
+      - name: Commit changes
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/scholar.json data/github.json data/orcid.json
+          git add data/scholar.json data/github.json data/orcid.json index.html
           # Only the "updated" timestamps changed? Skip the commit so Vercel doesn't redeploy for nothing.
           if git diff --cached -U0 | grep '^[+-] ' | grep -qv '"updated":'; then
-            git commit -m "chore: refresh scholar/github/orcid data"
+            git commit -m "chore: refresh data and prerendered page"
             git push
           else
             echo "No content changes."
