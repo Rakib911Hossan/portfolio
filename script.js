@@ -254,10 +254,9 @@ function renderRepos(p, gh) {
   $('#ghNote').innerHTML = `See all ${count ? count + ' ' : ''}repositories on <a href="https://github.com/${esc(user)}" target="_blank" rel="noopener">github.com/${esc(user)}</a>.`;
 }
 
-// Honors, tools and certificates as quiet one-liners under Education (researchers don't need a skills section)
+// Tools and certificates as quiet one-liners under Education (researchers don't need a skills section)
 function renderTools(p) {
-  const lines = (p.awards || []).map((a) => `<li class="cert-line"><span>Honors</span>${esc(a.name)}, ${esc(a.issuer)} —
-    ${a.terms.map((t) => `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>`).join(' · ')}</li>`);
+  const lines = [];
   if (p.tools?.length) lines.push(`<li class="cert-line"><span>Tools</span>${p.tools.map(esc).join(' · ')}</li>`);
   const certs = [...p.certifications].reverse();
   if (certs.length) {
@@ -267,6 +266,22 @@ function renderTools(p) {
       ${certs.map((c) => `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(short(c.name))}</a>`).join(' · ')} Specializations</li>`);
   }
   $('#certs').innerHTML = lines.join('');
+}
+
+// CV-style list: date, award, who gave it, and a certificate thumbnail
+function renderAwards(p) {
+  const list = p.awards || [];
+  $('#awards').hidden = !list.length;
+  $('#awardList').innerHTML = list.map((a) => `
+    <li>
+      <span class="award-date">${esc(a.date)}</span>
+      <div class="award-body">
+        <h3>${esc(a.name)}${a.term ? ` <span class="award-term">${esc(a.term)}</span>` : ''}</h3>
+        <p>${esc(a.issuer)}</p>
+        ${a.image ? `<a class="award-link" href="${esc(a.image)}" target="_blank" rel="noopener">View certificate →</a>` : ''}
+      </div>
+      ${a.image ? `<a class="award-thumb" href="${esc(a.image)}" target="_blank" rel="noopener"><img src="${esc(a.image)}" alt="${esc(a.name)} certificate, ${esc(a.term || a.date)}" loading="lazy"></a>` : ''}
+    </li>`).join('');
 }
 
 function renderMentors(p) {
@@ -328,6 +343,7 @@ const PRERENDER = new URLSearchParams(location.search).has('prerender');
   renderExperience(profile);
   renderPublications(profile, scholar, orcid);
   renderProjects(profile);
+  renderAwards(profile);
   renderTools(profile);
   renderMentors(profile);
   renderStats(profile, scholar);

@@ -278,18 +278,18 @@
   ],
   "awards": [
     {
+      "date": "Jan 2026",
       "name": "Dean's Award for Academic Achievement",
+      "term": "Fall 2025",
       "issuer": "Faculty of Engineering & Applied Sciences, BUBT",
-      "terms": [
-        {
-          "label": "Spring 2025",
-          "url": "assets/awards/deans-award-spring-2025.jpg"
-        },
-        {
-          "label": "Fall 2025",
-          "url": "assets/awards/deans-award-fall-2025.jpg"
-        }
-      ]
+      "image": "assets/awards/deans-award-fall-2025.jpg"
+    },
+    {
+      "date": "Aug 2025",
+      "name": "Dean's Award for Academic Achievement",
+      "term": "Spring 2025",
+      "issuer": "Faculty of Engineering & Applied Sciences, BUBT",
+      "image": "assets/awards/deans-award-spring-2025.jpg"
     }
   ]
 }
