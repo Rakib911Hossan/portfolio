@@ -254,9 +254,10 @@ function renderRepos(p, gh) {
   $('#ghNote').innerHTML = `See all ${count ? count + ' ' : ''}repositories on <a href="https://github.com/${esc(user)}" target="_blank" rel="noopener">github.com/${esc(user)}</a>.`;
 }
 
-// Tools and certificates as quiet one-liners under Education (researchers don't need a skills section)
+// Honors, tools and certificates as quiet one-liners under Education (researchers don't need a skills section)
 function renderTools(p) {
-  const lines = [];
+  const lines = (p.awards || []).map((a) => `<li class="cert-line"><span>Honors</span>${esc(a.name)}, ${esc(a.issuer)} —
+    ${a.terms.map((t) => `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>`).join(' · ')}</li>`);
   if (p.tools?.length) lines.push(`<li class="cert-line"><span>Tools</span>${p.tools.map(esc).join(' · ')}</li>`);
   const certs = [...p.certifications].reverse();
   if (certs.length) {
