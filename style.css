@@ -291,21 +291,9 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .lang-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); display: inline-block; }
 
 /* honors & awards */
-.awards { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-.awards li {
-  display: grid; grid-template-columns: 90px 1fr 150px; gap: 20px; align-items: center;
-  padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-}
-.award-date { font: 500 12.5px var(--mono); color: var(--faint); align-self: start; padding-top: 3px; }
-.award-body h3 { font-size: 16.5px; font-weight: 600; margin: 0 0 4px; }
-.award-term { font: 500 12px var(--mono); color: var(--warm); margin-left: 6px; white-space: nowrap; }
-.award-body p { margin: 0 0 6px; font-size: 14.5px; color: var(--muted); }
-.award-link { font-size: 14px; font-weight: 500; }
-.award-thumb img { display: block; width: 150px; aspect-ratio: 3 / 2; object-fit: cover; border: 1px solid var(--line); border-radius: 6px; }
-@media (max-width: 600px) {
-  .awards li { grid-template-columns: 1fr; gap: 8px; }
-  .award-thumb img { width: 100%; max-width: 320px; }
-}
+.awards { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; font-size: 15px; color: var(--muted); }
+.awards b { color: var(--text); font-weight: 600; }
+#awards { margin-top: 28px; scroll-margin-top: 90px; }
 
 /* mentors */
 .sub-title { font-size: 16.5px; font-weight: 600; margin: 32px 0 12px; }

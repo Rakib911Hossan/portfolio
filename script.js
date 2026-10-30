@@ -268,20 +268,13 @@ function renderTools(p) {
   $('#certs').innerHTML = lines.join('');
 }
 
-// CV-style list: date, award, who gave it, and a certificate thumbnail
+// CV-style one-liners: "Award (twice) — Issuer · Spring 2025, Fall 2025", terms link to certificates
 function renderAwards(p) {
   const list = p.awards || [];
   $('#awards').hidden = !list.length;
   $('#awardList').innerHTML = list.map((a) => `
-    <li>
-      <span class="award-date">${esc(a.date)}</span>
-      <div class="award-body">
-        <h3>${esc(a.name)}${a.term ? ` <span class="award-term">${esc(a.term)}</span>` : ''}</h3>
-        <p>${esc(a.issuer)}</p>
-        ${a.image ? `<a class="award-link" href="${esc(a.image)}" target="_blank" rel="noopener">View certificate →</a>` : ''}
-      </div>
-      ${a.image ? `<a class="award-thumb" href="${esc(a.image)}" target="_blank" rel="noopener"><img src="${esc(a.image)}" alt="${esc(a.name)} certificate, ${esc(a.term || a.date)}" loading="lazy"></a>` : ''}
-    </li>`).join('');
+    <li><b>${esc(a.name)}</b>${a.note ? ` (${esc(a.note)})` : ''} — ${esc(a.issuer)} ·
+      ${(a.terms || []).map((t) => t.url ? `<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>` : esc(t.label)).join(', ')}</li>`).join('');
 }
 
 function renderMentors(p) {
