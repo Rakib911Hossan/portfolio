@@ -124,13 +124,13 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 }
 .tag-btn:hover { text-decoration: none; filter: brightness(1.08); }
 .tag-btn svg { width: 15px; height: 15px; }
-.socials { list-style: none; display: flex; gap: 2px; margin: 10px 0 0 -8px; padding: 0; }
+.socials { list-style: none; display: flex; gap: 8px; margin: 10px 0 0 -8px; padding: 0; }
 .socials a {
-  display: grid; place-items: center; width: 42px; height: 42px; border-radius: 10px;
+  display: grid; place-items: center; width: 50px; height: 50px; border-radius: 10px;
   color: var(--muted); transition: color .15s, background .15s;
 }
 .socials a:hover { color: var(--accent); background: var(--accent-soft); }
-.socials svg { width: 22px; height: 22px; }
+.socials svg { width: 28px; height: 28px; }
 .mini-stats {
   display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 12px;
   border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
