@@ -5,8 +5,8 @@
   "photo": "assets/rakib.jpg",
   "cv": "assets/Rakib_Hossan_CV.pdf",
   "email": "rakib911hossan@gmail.com",
-  "availability": "🎓 Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
-  "lead": "I work on <strong>large language models</strong> and <strong>natural language processing</strong> — how to make AI systems reason better, stay grounded in evidence, and work reliably across languages, speech, and real-world data.",
+  "availability": "Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
+  "lead": "I work on <strong>large language models</strong> and <strong>natural language processing</strong> — how to make AI systems reason better, stay grounded in evidence, and work reliably across languages, speech, and real-world data. In my PhD, I want to study <strong>how LLMs can check their own reasoning against evidence</strong>, reducing hallucination, and how to make that hold up in <strong>low-resource languages like Bangla</strong>, where labelled data is scarce.",
   "bio": "I'm currently an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working with a small research team on Bangla medical speech recognition, medical prescription understanding, and agentic test-time reinforcement learning. I went to sea first because I wanted a challenging, disciplined profession, and spent five years as a marine engineer on VLCC super tankers. In 2023 I came back to my first interest, computing: I started a B.Sc. in Computer Science &amp; Engineering at BUBT from scratch, and since 2024 have studied alongside full-time industry work while holding a 4.00 CGPA.",
   "links": {
     "github": "Rakib911Hossan",
@@ -69,27 +69,22 @@
   "news": [
     {
       "date": "2026-07",
-      "icon": "🔬",
       "html": "Now working mainly as a <strong>researcher</strong> on the Penta AI team: Bangla medical speech, medical prescriptions, and agentic test-time RL."
     },
     {
       "date": "2026-04",
-      "icon": "🚀",
       "html": "Moved into an <strong>AI Engineer</strong> role at Penta Global Ltd., building LLM pipelines for scientific claim extraction and evidence grounding."
     },
     {
       "date": "2026-04",
-      "icon": "🎓",
       "html": "Completed three DeepLearning.AI specializations: <a href=\"https://www.coursera.org/account/accomplishments/specialization/XMKAPHUMMHVB\">Machine Learning</a>, <a href=\"https://www.coursera.org/account/accomplishments/specialization/9ME2UUUP5Z7C\">Deep Learning</a>, and <a href=\"https://www.coursera.org/account/accomplishments/specialization/H6KVV0WMY6SE\">NLP</a>."
     },
     {
       "date": "2026-01",
-      "icon": "🏅",
       "html": "Received the <strong>Dean's Award for Academic Achievement</strong> at BUBT for the second time (Fall 2025, after Spring 2025). <a href=\"assets/awards/deans-award-fall-2025.jpg\">Certificate →</a>"
     },
     {
       "date": "2025-12",
-      "icon": "📄",
       "html": "First-author paper <strong>PromptGuard</strong> presented at the BLP Workshop, <strong>AACL-IJCNLP 2025</strong>. <a href=\"https://aclanthology.org/2025.banglalp-1.35/\">Paper →</a>"
     }
   ],
@@ -184,9 +179,10 @@
       "links": {
         "Paper": "https://aclanthology.org/2025.banglalp-1.35/",
         "PDF": "https://aclanthology.org/2025.banglalp-1.35.pdf",
-        "Code": "https://github.com/Rakib911Hossan/PromptGuard"
+        "Code": "https://github.com/Rakib911Hossan/PromptGuard",
+        "BibTeX": "https://aclanthology.org/2025.banglalp-1.35.bib"
       },
-      "abstract": "A prompt-based, few-shot framework for Bengali hate speech detection that combines LLM classification with majority voting across repeated generations and keyword-similarity signals, targeting reliable predictions in a low-resource language setting."
+      "abstract": "A prompt-based, few-shot framework for Bengali hate speech detection that combines LLM classification with majority voting across repeated generations and keyword-similarity signals, targeting reliable predictions in a low-resource language setting. It reaches 67.61 micro-F1, compared with 60.75 for an n-gram baseline."
     }
   ],
   "projects": [

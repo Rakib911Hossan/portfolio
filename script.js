@@ -92,7 +92,7 @@ function renderNews(p) {
   const LIMIT = 4;
   const draw = (all) => {
     $('#newsList').innerHTML = (all ? news : news.slice(0, LIMIT)).map((n) =>
-      `<li><time>${fmtMonth(n.date)}</time><span>${n.icon || '•'} ${n.html}</span></li>`).join('');
+      `<li><time>${fmtMonth(n.date)}</time><span>${n.icon ? n.icon + ' ' : ''}${n.html}</span></li>`).join('');
     externalize($('#newsList'));
   };
   draw(false);
