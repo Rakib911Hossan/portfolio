@@ -19,7 +19,7 @@
       "title": "Reasoning & Claim Verification",
       "work": [
         {
-          "label": "Evidence Claim Pipeline",
+          "label": "Claim Revision Benchmark",
           "url": "#projects",
           "venue": "thesis, ongoing"
         },
@@ -188,8 +188,8 @@
   "projects": [
     {
       "tag": "Reasoning & Claim Verification",
-      "title": "Evidence Claim Pipeline (Thesis)",
-      "text": "A system that extracts claims from scientific papers and reasons about the evidence and premises behind them, using claim verification and abductive reasoning with LLMs.",
+      "title": "Claim Revision Benchmark (Thesis)",
+      "text": "A benchmark that tests whether LLMs can revise a paper's claims when one result is withdrawn or corrected. A pipeline builds a claim dependency graph for each arXiv paper; the model must decide which claims fall, weaken, need a new number, or still stand. Three tasks: withdrawal, numeric correction, and cross-paper propagation of real published corrections, with trap claims that look related but do not depend on the changed result. Manuscript in preparation (ACL).",
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
     {
