@@ -135,8 +135,17 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 12px;
   border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
 }
-.mini-stats div { display: flex; flex-direction: column; align-items: center; padding: 12px 4px; }
-.mini-stats div + div { border-left: 1px solid var(--line); }
+.mini-stats a { display: flex; flex-direction: column; align-items: center; padding: 12px 4px; text-align: center; transition: background .2s; }
+.mini-stats a:hover { background: var(--accent-soft); text-decoration: none; }
+.mini-stats a + a { border-left: 1px solid var(--line); }
+.seeking {
+  display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 2px; padding: 4px 12px; border-radius: 999px;
+  font: 600 13px var(--sans); color: var(--warm); background: color-mix(in srgb, var(--warm) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--warm) 35%, transparent);
+}
+.seeking:hover { text-decoration: none; border-color: var(--warm); }
+.seeking .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .seeking .dot { animation: none; } }
 .mini-stats b { font: 700 24px/1.2 var(--serif); color: var(--accent); }
 .mini-stats span { font-size: 13px; color: var(--faint); }
 

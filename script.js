@@ -15,6 +15,7 @@ const ICONS = {
   github: '<svg viewBox="0 0 24 24" class="fill"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>',
   linkedin: '<svg viewBox="0 0 24 24" class="fill"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>',
   orcid: '<svg viewBox="0 0 24 24" class="fill"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.3 17.3H6.7V9.7h1.6zM7.5 8.6a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm2.4.9h3.3c3.1 0 4.5 2.2 4.5 3.9 0 1.9-1.5 3.9-4.5 3.9H9.9zm1.6 1.4v5h1.6c2.3 0 2.9-1.7 2.9-2.5 0-1.3-.8-2.5-2.9-2.5z"/></svg>',
+  acl: '<svg viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10l2 2h6.5A1.5 1.5 0 0 1 20 7.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5z"/><path d="M8 11h8M8 15h5"/></svg>',
   star: '<svg viewBox="0 0 24 24" class="fill"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>',
 };
 
@@ -55,7 +56,10 @@ function renderHero(p) {
     L.github && ['GitHub', `https://github.com/${L.github}`, ICONS.github],
     L.linkedin && ['LinkedIn', `https://www.linkedin.com/in/${L.linkedin}`, ICONS.linkedin],
     L.orcid && ['ORCID', `https://orcid.org/${L.orcid}`, ICONS.orcid],
+    L.acl && ['ACL Anthology', `https://aclanthology.org/people/${L.acl}/`, ICONS.acl],
   ].filter(Boolean);
+  $('#seeking').hidden = !p.seeking;
+  $('#seeking').innerHTML = p.seeking ? `<span class="dot"></span>${esc(p.seeking)}` : '';
   $('#socials').innerHTML = socials.map(([t, u, i]) =>
     `<li><a href="${esc(u)}" aria-label="${t}" title="${t}">${i}</a></li>`).join('');
   $('#contactBtn').href = `mailto:${p.email}`;
@@ -63,19 +67,13 @@ function renderHero(p) {
   externalize($('#about'));
 }
 
-function renderStats(p, scholar) {
-  const s = scholar?.stats || {};
-  const papers = Math.max(p.publications.length, scholar?.publications?.length || 0);
-  const plural = (n, word) => `${word}${n === 1 ? '' : 's'}`;
-  // Scholar metrics, refreshed daily by the updater
-  const items = [
-    [papers, plural(papers, 'paper')],
-    s.citations != null && [s.citations, plural(s.citations, 'citation')],
-    s.h_index != null && [s.h_index, 'h-index'],
-  ].filter(Boolean);
+// Profile-card highlights (hand-picked in profile.json); Scholar metrics live under Publications
+function renderStats(p) {
+  const items = p.highlights || [];
+  $('#stats').hidden = !items.length;
   $('#stats').style.gridTemplateColumns = `repeat(${items.length}, 1fr)`;
-  $('#stats').innerHTML = items.map(([n, l]) =>
-    `<div><b>${esc(n)}</b><span>${l}</span></div>`).join('');
+  $('#stats').innerHTML = items.map((h) =>
+    `<a href="${esc(h.url || '#')}"><b>${esc(h.n)}</b><span>${esc(h.l)}</span></a>`).join('');
 }
 
 // Each research area lists the work behind it, like "Area: Paper (Venue) · Project"

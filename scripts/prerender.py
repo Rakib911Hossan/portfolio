@@ -17,7 +17,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 # Strings that only exist once script.js has rendered from the JSON data
-MARKERS = ['class="pub"', 'class="repo-meta"', '<span>h-index</span>', 'class="card proj"']
+MARKERS = ['class="pub"', 'class="repo-meta"', '<span>CGPA</span>', 'class="card proj"']
 
 
 class QuietHandler(http.server.SimpleHTTPRequestHandler):
