@@ -17,7 +17,7 @@
   "email": "rakib911hossan@gmail.com",
   "availability": "Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
   "lead": "I work on large language models and NLP. In my PhD, I want to study <strong>how LLMs can check their reasoning against evidence and update their conclusions when it changes</strong>, and <strong>how LLM agents can keep improving on new tasks without labelled data</strong>, including in low-resource languages like Bangla.",
-  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working on Bangla medical speech recognition, prescription understanding, and agentic test-time RL. Before computing, I spent five years as a marine engineer on VLCC supertankers. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
+  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working on Bangla medical speech recognition, prescription understanding, and agentic test-time RL. Before computing, I spent five years as a marine engineer on VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
   "links": {
     "github": "Rakib911Hossan",
     "scholar": "-NhjHp8AAAAJ",
@@ -88,8 +88,7 @@
       "where": "At sea",
       "marine": true,
       "points": [
-        "VLCC (Very Large Crude Carrier), GRT 160,000.",
-        "Maintained the main engine, generator (Yanmar), fresh water generator, boiler (MHI / MAC-90 B), and purifier systems."
+        "Ran and maintained main engine, power, boiler and water systems on a crude oil supertanker (VLCC, GRT 160,000)."
       ]
     },
     {
@@ -99,8 +98,7 @@
       "where": "At sea",
       "marine": true,
       "points": [
-        "Super tankers with Jhampur Group and NITC.",
-        "Maintained the main engine (incl. Mitsubishi 7UEC85LS), generator (Yanmar), fresh water generator, S/W treatment plant, purifier, firefighting equipment, and emergency machinery."
+        "Four years on super tankers maintaining propulsion, power and emergency systems."
       ]
     }
   ],
