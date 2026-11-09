@@ -201,7 +201,15 @@ function renderPublications(p, scholar, orcid) {
 
   const sid = p.links.scholar;
   $('#scholarNote').innerHTML = sid
-    ? `Synced from <a href="https://scholar.google.com/citations?user=${esc(sid)}&hl=en" target="_blank" rel="noopener">Google Scholar</a>${scholar?.updated ? ` · ${new Date(scholar.updated).toLocaleDateString('en', { dateStyle: 'medium' })}` : ''}.`
+    ? `${(() => {
+        // Real metrics, kept small here rather than in the profile card
+        const st = scholar?.stats || {};
+        const parts = [
+          st.citations != null && `${st.citations} citation${st.citations === 1 ? '' : 's'}`,
+          st.h_index != null && `h-index ${st.h_index}`,
+        ].filter(Boolean);
+        return parts.length ? esc(parts.join(' · ')) + ' · synced' : 'Synced';
+      })()} from <a href="https://scholar.google.com/citations?user=${esc(sid)}&hl=en" target="_blank" rel="noopener">Google Scholar</a>${scholar?.updated ? ` · ${new Date(scholar.updated).toLocaleDateString('en', { dateStyle: 'medium' })}` : ''}.`
     : '';
 }
 
