@@ -17,7 +17,7 @@
   "email": "rakib911hossan@gmail.com",
   "availability": "Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
   "lead": "I work on large language models and NLP. In my PhD, I want to study <strong>how LLMs can verify each step of their reasoning against evidence and revise their conclusions when that evidence changes</strong>, and <strong>how to train LLM agents with reinforcement learning when reliable rewards are scarce</strong>, without reinforcing their own mistakes. I want both to hold up in high-stakes, low-resource settings, like the medical speech and prescription data I work with now.",
-  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working on Bangla medical speech recognition, prescription understanding, and agentic test-time RL. Before computing, I spent five years as a marine engineer on VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
+  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, where I work on agentic test-time reinforcement learning and lead a benchmark on clinically important errors in Bangla medical speech recognition. Before computing, I spent five years as a marine engineer on VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
   "links": {
     "github": "Rakib911Hossan",
     "scholar": "-NhjHp8AAAAJ",
@@ -55,7 +55,7 @@
       "dates": "Apr 2024 – Present",
       "where": "Dhaka",
       "points": [
-        "In a five-person research team: lead author of a Bangla dialectal medical speech recognition benchmark, core contributor on medical prescription understanding, and co-author on agentic test-time reinforcement learning (TTRL).",
+        "Work on agentic test-time reinforcement learning, where the reward is a vote over the model's own answers; lead a benchmark on clinically important errors in Bangla dialect medical speech recognition; contribute to medical prescription understanding.",
         "Designed LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents, using RAG, majority-vote consensus, and LLM-judge scoring to reduce hallucination.",
         "Previously Software Engineer (Apr 2024 – Mar 2026), building enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
@@ -147,13 +147,13 @@
       "theme": "Reasoning & agents",
       "status": "Ongoing",
       "title": "Claim Revision Benchmark (Thesis)",
-      "text": "A benchmark on how LLMs update scientific claims when the results they depend on change.",
+      "text": "For my thesis, I am building a benchmark on how claims in a paper depend on each other, and whether LLMs update them when the results they depend on change.",
       "keywords": [
         "Benchmark",
         "Scientific claims",
         "LLM reasoning"
       ],
-      "role": "Lead author (undergraduate thesis).",
+      "role": "",
       "diagram": "claims",
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
@@ -161,13 +161,13 @@
       "theme": "Reasoning & agents",
       "status": "Ongoing",
       "title": "Agentic Test-Time Reinforcement Learning",
-      "text": "Applying test-time reinforcement learning (TTRL) to LLM agents, so they can keep improving on new, unlabeled tasks using their own consensus as a reward signal.",
+      "text": "I work on test-time reinforcement learning for LLM agents, where the reward is a vote over the model's own answers, so agents can keep improving on new tasks without labels.",
       "keywords": [
         "Test-time RL",
         "LLM agents",
         "Label-free reward"
       ],
-      "role": "Co-author.",
+      "role": "",
       "diagram": "ttrl",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
@@ -175,13 +175,13 @@
       "theme": "Medical AI",
       "status": "Ongoing",
       "title": "Bangla Dialectal Medical ASR Benchmark",
-      "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
+      "text": "I lead a benchmark on clinically important errors in Bangla dialect medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
       "keywords": [
         "Speech",
         "Bangla dialects",
         "Clinical errors"
       ],
-      "role": "Lead author.",
+      "role": "",
       "diagram": "asr",
       "collab": "<a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a> and <a href=\"https://md-fahim.github.io/\">MD Fahim</a>",
       "collabLabel": "Mentored by"
@@ -190,13 +190,13 @@
       "theme": "Medical AI",
       "status": "Ongoing",
       "title": "Medical Prescription Understanding",
-      "text": "Reading and structuring medical prescriptions with AI, so that drug names, dosages, and instructions can be extracted reliably.",
+      "text": "I work on reading and structuring medical prescriptions with AI, so that drug names, dosages, and instructions can be extracted reliably.",
       "keywords": [
         "Document AI",
         "Medical",
         "Information extraction"
       ],
-      "role": "Core contributor, working closely with the lead author.",
+      "role": "",
       "diagram": "rx",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
@@ -204,13 +204,13 @@
       "theme": "Multilingual data pipelines",
       "status": "Completed",
       "title": "Human-Rights Dataset Extraction",
-      "text": "Multi-stage LLM pipeline that turns a scanned Bangla source document into a structured, translated dataset, validated against an independent third-party dataset.",
+      "text": "I built a multi-stage LLM pipeline that turns a scanned Bangla source document into a structured, translated dataset, validated against an independent third-party dataset.",
       "keywords": [
         "LLM pipeline",
         "Bangla OCR",
         "Translation"
       ],
-      "role": "Built the extraction pipeline.",
+      "role": "",
       "diagram": "docs",
       "collab": "<a href=\"https://avnbd.org/\">AVNBD</a>"
     }
