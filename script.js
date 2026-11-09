@@ -207,14 +207,74 @@ function renderPublications(p, scholar, orcid) {
     : '';
 }
 
+// Small schematic per project (key = "diagram" in profile.json). Drawn in a 240x96 box;
+// colours come from CSS classes so they follow the light/dark theme.
+const box = (x, y, w, h, label, cls = '') =>
+  `<rect class="d-box ${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>` +
+  (label ? `<text x="${x + w / 2}" y="${y + h / 2 + 3.5}" text-anchor="middle">${label}</text>` : '');
+const arrow = (x1, y1, x2, y2) => `<path class="d-arrow" d="M${x1} ${y1} L${x2} ${y2}" marker-end="url(#d-head)"/>`;
+const DIAGRAMS = {
+  claims: box(8, 14, 62, 28, 'result') + box(8, 54, 62, 28, 'result′', 'd-hot') +
+    `<text class="d-warm" x="39" y="51" text-anchor="middle">Δ</text>` +
+    arrow(72, 68, 96, 54) + box(98, 34, 44, 28, 'LLM', 'd-acc') + arrow(144, 48, 166, 48) +
+    box(168, 34, 64, 28, 'claim′') + `<text class="d-faint" x="200" y="78" text-anchor="middle">revise?</text>`,
+  ttrl: box(6, 34, 48, 28, 'task') + arrow(56, 48, 76, 48) + box(78, 34, 46, 28, 'agent', 'd-acc') +
+    arrow(126, 42, 149, 32) + arrow(126, 48, 149, 48) + arrow(126, 54, 149, 64) +
+    `<circle class="d-dot" cx="155" cy="31" r="4"/><circle class="d-dot" cx="155" cy="48" r="4"/><circle class="d-dot d-off" cx="155" cy="65" r="4"/>` +
+    arrow(164, 48, 182, 48) + box(184, 34, 50, 28, 'vote') +
+    `<path class="d-arrow d-loop" d="M209 32 C209 -6 101 -6 101 30" marker-end="url(#d-head)"/>` +
+    `<text class="d-warm" x="155" y="20" text-anchor="middle">reward</text>` +
+    `<text class="d-faint" x="155" y="88" text-anchor="middle">k rollouts</text>`,
+  asr: `<path class="d-wave" d="M6 48 l6 0 l3 -14 l4 26 l4 -20 l4 16 l4 -10 l4 6 l3 -4 l6 0"/>` +
+    arrow(48, 48, 66, 48) + box(68, 34, 44, 28, 'ASR', 'd-acc') + arrow(114, 48, 132, 48) +
+    box(134, 22, 100, 52, '') + `<text x="184" y="42" text-anchor="middle">ref: 500 mg</text>` +
+    `<text class="d-warm" x="184" y="62" text-anchor="middle">asr: 50 mg ✗</text>`,
+  rx: box(8, 12, 54, 72, '') + `<text class="d-warm d-big" x="20" y="34">Rx</text>` +
+    `<path class="d-line" d="M18 46 h34 M18 56 h28 M18 66 h32"/>` + arrow(64, 48, 84, 48) +
+    box(86, 34, 44, 28, 'LLM', 'd-acc') + arrow(132, 48, 150, 48) +
+    box(152, 12, 82, 22, 'drug') + box(152, 37, 82, 22, 'dose') + box(152, 62, 82, 22, 'frequency'),
+  docs: box(6, 16, 52, 64, '') + `<text x="32" y="44" text-anchor="middle">বাংলা</text>` +
+    `<path class="d-line" d="M16 56 h32 M16 64 h26"/>` + arrow(60, 48, 74, 48) +
+    box(76, 34, 22, 28, '1', 'd-acc') + box(102, 34, 22, 28, '2', 'd-acc') + box(128, 34, 22, 28, '3', 'd-acc') +
+    arrow(152, 48, 166, 48) + box(168, 22, 66, 52, '') +
+    `<path class="d-line" d="M168 39 h66 M168 56 h66 M190 22 v52 M212 22 v52"/>` +
+    `<text class="d-warm" x="201" y="88" text-anchor="middle">✓ verified</text>`,
+};
+const diagram = (key) => DIAGRAMS[key] ? `
+  <svg class="thumb" viewBox="0 0 240 96" role="img" aria-hidden="true">
+    <defs><marker id="d-head" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" class="d-head"/></marker></defs>${DIAGRAMS[key]}</svg>` : '';
+
 function renderProjects(p) {
-  $('#projectCards').innerHTML = p.projects.map((x) => `
-    <article class="card">
-      <span class="tag">${esc(x.tag)}</span>
-      <h3>${esc(x.title)}</h3>
-      <p>${esc(x.text)}</p>
-      ${x.collab ? `<p class="collab">With ${x.collab}</p>` : ''}
-    </article>`).join('');
+  const themes = [...new Set(p.projects.map((x) => x.theme))];
+  const count = (s) => p.projects.filter((x) => x.status === s).length;
+  const statuses = [...new Set(p.projects.map((x) => x.status))];
+  const letter = (i) => String.fromCharCode(65 + i);
+  let n = 0;
+
+  $('#projectsSummary').innerHTML = `
+    <p class="proj-stats"><b>${p.projects.length}</b> projects${statuses.map((s) => ` · <b>${count(s)}</b> ${esc(s.toLowerCase())}`).join('')}</p>
+    <nav class="proj-jump" aria-label="Research themes">${themes.map((t, i) =>
+      `<a href="#theme-${slug(t)}"><span>${letter(i)}</span>${esc(t)} <em>${p.projects.filter((x) => x.theme === t).length}</em></a>`).join('')}</nav>`;
+
+  $('#projectCards').innerHTML = themes.map((t, i) => `
+    <div class="theme" id="theme-${slug(t)}">
+      <h3 class="theme-title"><span>${letter(i)}</span>${esc(t)}</h3>
+      <div class="cards">${p.projects.filter((x) => x.theme === t).map((x) => `
+        <article class="card proj">
+          <div class="proj-top">
+            <span class="proj-num">${String(++n).padStart(2, '0')}</span>
+            <span class="status status-${slug(x.status)}">${esc(x.status)}</span>
+          </div>
+          ${diagram(x.diagram)}
+          <h4>${esc(x.title)}</h4>
+          ${x.keywords?.length ? `<p class="keywords">${x.keywords.map(esc).join(' · ')}</p>` : ''}
+          <p>${esc(x.text)}</p>
+          ${x.role ? `<p class="role"><b>My role:</b> ${esc(x.role)}</p>` : ''}
+          ${x.collab ? `<p class="collab">${esc(x.collabLabel || 'With')} ${x.collab}</p>` : ''}
+        </article>`).join('')}
+      </div>
+    </div>`).join('');
   externalize($('#projectCards'));
 }
 

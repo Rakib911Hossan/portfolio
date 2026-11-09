@@ -56,12 +56,12 @@
         {
           "label": "Bangla Dialectal Medical ASR Benchmark",
           "url": "#projects",
-          "venue": "ongoing"
+          "venue": "lead author, ongoing"
         },
         {
           "label": "Medical prescription understanding",
           "url": "#projects",
-          "venue": "ongoing"
+          "venue": "core contributor, ongoing"
         }
       ]
     }
@@ -96,7 +96,7 @@
       "dates": "Apr 2024 – Present",
       "where": "Dhaka",
       "points": [
-        "Research on Bangla dialectal medical speech recognition, medical prescription understanding, and agentic test-time reinforcement learning (TTRL), with a five-person research team.",
+        "In a five-person research team: lead author of a Bangla dialectal medical speech recognition benchmark, core contributor on medical prescription understanding, and co-author on agentic test-time reinforcement learning (TTRL).",
         "Designed LLM pipelines for claim extraction, evidence grounding, and dependency-graph validation over scientific documents, using RAG, majority-vote consensus, and LLM-judge scoring to reduce hallucination.",
         "Previously Software Engineer (Apr 2024 – Mar 2026), building enterprise applications: Bangladesh Election Commission web system, ISP billing services, and the <a href=\"https://hrm.pentabd.com/\">HRM Management System</a>."
       ]
@@ -187,33 +187,74 @@
   ],
   "projects": [
     {
-      "tag": "Reasoning & Claim Verification",
+      "theme": "Reasoning & agents",
+      "status": "Ongoing",
       "title": "Claim Revision Benchmark (Thesis)",
-      "text": "A benchmark on how LLMs update scientific claims when the results they depend on change. Manuscript in preparation.",
+      "text": "A benchmark on how LLMs update scientific claims when the results they depend on change.",
+      "keywords": [
+        "Benchmark",
+        "Scientific claims",
+        "LLM reasoning"
+      ],
+      "role": "Lead author (undergraduate thesis).",
+      "diagram": "claims",
       "collab": "<a href=\"https://roydipta.com/\">Shubhashis Roy Dipta</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://md-fahim.github.io/\">MD Fahim</a>"
     },
     {
-      "tag": "Reasoning & Agents",
+      "theme": "Reasoning & agents",
+      "status": "Ongoing",
       "title": "Agentic Test-Time Reinforcement Learning",
       "text": "Applying test-time reinforcement learning (TTRL) to LLM agents, so they can keep improving on new, unlabeled tasks using their own consensus as a reward signal.",
+      "keywords": [
+        "Test-time RL",
+        "LLM agents",
+        "Label-free reward"
+      ],
+      "role": "Co-author.",
+      "diagram": "ttrl",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
     {
-      "tag": "Speech & Clinical AI",
+      "theme": "Medical AI for Bangla speakers",
+      "status": "Ongoing",
       "title": "Bangla Dialectal Medical ASR Benchmark",
       "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
-      "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
+      "keywords": [
+        "Speech",
+        "Bangla dialects",
+        "Clinical errors"
+      ],
+      "role": "Lead author.",
+      "diagram": "asr",
+      "collab": "<a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a> and <a href=\"https://md-fahim.github.io/\">MD Fahim</a>",
+      "collabLabel": "Mentored by"
     },
     {
-      "tag": "Speech & Clinical AI",
+      "theme": "Medical AI for Bangla speakers",
+      "status": "Ongoing",
       "title": "Medical Prescription Understanding",
       "text": "Reading and structuring medical prescriptions with AI, so that drug names, dosages, and instructions can be extracted reliably.",
+      "keywords": [
+        "Document AI",
+        "Medical",
+        "Information extraction"
+      ],
+      "role": "Core contributor, working closely with the lead author.",
+      "diagram": "rx",
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
     {
-      "tag": "Multilingual NLP",
+      "theme": "Multilingual data pipelines",
+      "status": "Completed",
       "title": "Human-Rights Dataset Extraction",
       "text": "Multi-stage LLM pipeline that turns a scanned Bangla source document into a structured, translated dataset, validated against an independent third-party dataset.",
+      "keywords": [
+        "LLM pipeline",
+        "Bangla OCR",
+        "Translation"
+      ],
+      "role": "Built the extraction pipeline.",
+      "diagram": "docs",
       "collab": "<a href=\"https://avnbd.org/\">AVNBD</a>"
     }
   ],
