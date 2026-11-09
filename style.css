@@ -144,8 +144,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   border: 1px solid color-mix(in srgb, var(--warm) 35%, transparent);
 }
 .seeking:hover { text-decoration: none; border-color: var(--warm); }
-.seeking .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse 2s ease-in-out infinite; }
-@media (prefers-reduced-motion: reduce) { .seeking .dot { animation: none; } }
+.seeking .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 .mini-stats b { font: 700 24px/1.2 var(--serif); color: var(--accent); }
 .mini-stats span { font-size: 13px; color: var(--faint); }
 
