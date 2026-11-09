@@ -58,6 +58,8 @@ function renderHero(p) {
     L.orcid && ['ORCID', `https://orcid.org/${L.orcid}`, ICONS.orcid],
     L.acl && ['ACL Anthology', `https://aclanthology.org/people/${L.acl}/`, ICONS.acl],
   ].filter(Boolean);
+  $('#interests').hidden = !p.interests?.length;
+  $('#interests').innerHTML = (p.interests || []).map((t) => `<li>${esc(t)}</li>`).join('');
   $('#seeking').hidden = !p.seeking;
   $('#seeking').innerHTML = p.seeking ? `<span class="dot"></span>${esc(p.seeking)}` : '';
   $('#socials').innerHTML = socials.map(([t, u, i]) =>

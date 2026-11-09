@@ -3,6 +3,15 @@
   "position": "AI Researcher & Engineer",
   "location": "Dhaka, Bangladesh",
   "seeking": "Applying for Fall 2027 PhD",
+  "interests": [
+    "Natural language processing",
+    "LLM reasoning",
+    "Reinforcement learning for LLMs",
+    "LLM agents",
+    "Factuality & hallucination",
+    "Multimodal AI (speech & vision)",
+    "Multilingual & low-resource NLP"
+  ],
   "photo": "assets/rakib.jpg",
   "cv": "assets/Rakib_Hossan_CV.pdf",
   "email": "rakib911hossan@gmail.com",
