@@ -16,7 +16,7 @@
   "cv": "assets/Rakib_Hossan_CV.pdf",
   "email": "rakib911hossan@gmail.com",
   "availability": "Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
-  "lead": "I work on large language models and NLP. In my PhD, I want to study <strong>how LLMs can check their reasoning against evidence and update their conclusions when it changes</strong>, and <strong>how LLM agents can keep improving on new tasks without labelled data</strong>, including in low-resource languages like Bangla.",
+  "lead": "I work on large language models and NLP. In my PhD, I want to study <strong>how LLMs can verify each step of their reasoning against evidence and revise their conclusions when that evidence changes</strong>, and <strong>how to train LLM agents with reinforcement learning when reliable rewards are scarce</strong>, without reinforcing their own mistakes. I want both to hold up in high-stakes, low-resource settings, like the medical speech and prescription data I work with now.",
   "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, working on Bangla medical speech recognition, prescription understanding, and agentic test-time RL. Before computing, I spent five years as a marine engineer on VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
   "links": {
     "github": "Rakib911Hossan",
@@ -172,7 +172,7 @@
       "collab": "<a href=\"https://md-fahim.github.io/\">MD Fahim</a>, <a href=\"https://mirsazzathossain.me/\">Mir Sazzat Hossain</a>, <a href=\"https://intesar-tahmid.tech/\">Intesar Tahmid</a>, <a href=\"https://galibmahmudjim.com/\">Galib Mahmud Jim</a>, <a href=\"https://scholar.google.com/citations?user=-GLkEJUAAAAJ\">Md Mahir Jawad</a>"
     },
     {
-      "theme": "Medical AI for Bangla speakers",
+      "theme": "Medical AI",
       "status": "Ongoing",
       "title": "Bangla Dialectal Medical ASR Benchmark",
       "text": "A benchmark for clinically significant errors in Bangla dialectal medical speech recognition, built from synthetic doctor–patient conversations generated with LLMs and text-to-speech.",
@@ -187,7 +187,7 @@
       "collabLabel": "Mentored by"
     },
     {
-      "theme": "Medical AI for Bangla speakers",
+      "theme": "Medical AI",
       "status": "Ongoing",
       "title": "Medical Prescription Understanding",
       "text": "Reading and structuring medical prescriptions with AI, so that drug names, dosages, and instructions can be extracted reliably.",
