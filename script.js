@@ -78,15 +78,6 @@ function renderStats(p) {
     `<a href="${esc(h.url || '#')}"><b>${esc(h.n)}</b><span>${esc(h.l)}</span></a>`).join('');
 }
 
-// Each research area lists the work behind it, like "Area: Paper (Venue) · Project"
-function renderFocus(p) {
-  $('#focus').innerHTML = p.focus.map((f) => `
-    <li><b>${esc(f.title)}:</b>
-      ${(f.work || []).map((w) => `<a href="${esc(w.url)}">${esc(w.label)}</a>${w.venue ? ` <span class="venue-tag">(${esc(w.venue)})</span>` : ''}`).join(' · ')}
-    </li>`).join('');
-  externalize($('#focus'));
-}
-
 function renderNews(p) {
   const news = [...p.news].sort((a, b) => b.date.localeCompare(a.date));
   const LIMIT = 4;
@@ -399,7 +390,6 @@ const PRERENDER = new URLSearchParams(location.search).has('prerender');
     return;
   }
   renderHero(profile);
-  renderFocus(profile);
   renderNews(profile);
   renderExperience(profile);
   renderPublications(profile, scholar, orcid);

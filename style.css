@@ -176,9 +176,6 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 .intro .lead { font-size: 19.5px; line-height: 1.6; margin: 0 0 14px; }
 .lead strong { color: var(--accent); font-weight: 600; }
 .bio { color: var(--muted); margin: 0 0 16px; }
-.focus-list { margin: 0 0 22px; padding-left: 20px; }
-.focus-list li { margin: 7px 0; font-size: 15px; }
-.focus-list b { font-weight: 600; }
 .venue-tag { font-size: 12.5px; font-weight: 600; color: var(--muted); }
 .callout {
   padding: 16px 20px; border-radius: 14px; text-align: center; font-size: 15px;
@@ -436,10 +433,6 @@ svg.thumb {
 .exp > li.marine .exp-org { color: var(--text); }
 .exp > li.marine .exp-org::before { content: '⚓ '; }
 
-/* Justify the intro paragraphs on wide screens (as on roydipta.com); phones stay left-aligned */
-@media (min-width: 901px) {
-  .intro .lead, .intro .bio { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-}
 
 /* certifications collapsed to one quiet line */
 .certs li.cert-line { display: block; padding: 0; background: none; border: 0; font-size: 14.5px; color: var(--muted); }
