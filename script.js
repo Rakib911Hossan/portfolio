@@ -248,33 +248,41 @@ function renderProjects(p) {
   const themes = [...new Set(p.projects.map((x) => x.theme))];
   const count = (s) => p.projects.filter((x) => x.status === s).length;
   const statuses = [...new Set(p.projects.map((x) => x.status))];
-  const letter = (i) => String.fromCharCode(65 + i);
-  let n = 0;
 
+  // Layout modelled on roydipta.com "Featured Publications": a theme filter, then one
+  // horizontal card per project (schematic on the left, text on the right)
   $('#projectsSummary').innerHTML = `
     <p class="proj-stats"><b>${p.projects.length}</b> projects${statuses.map((s) => ` · <b>${count(s)}</b> ${esc(s.toLowerCase())}`).join('')}</p>
-    <nav class="proj-jump" aria-label="Research themes">${themes.map((t, i) =>
-      `<a href="#theme-${slug(t)}"><span>${letter(i)}</span>${esc(t)} <em>${p.projects.filter((x) => x.theme === t).length}</em></a>`).join('')}</nav>`;
+    <div class="proj-filter" role="toolbar" aria-label="Filter projects by theme">
+      <button type="button" class="active" data-theme="*">All</button>${themes.map((t) =>
+      `<button type="button" data-theme="${slug(t)}">${esc(t)}</button>`).join('')}
+    </div>`;
 
-  $('#projectCards').innerHTML = themes.map((t, i) => `
-    <div class="theme" id="theme-${slug(t)}">
-      <h3 class="theme-title"><span>${letter(i)}</span>${esc(t)}</h3>
-      <div class="cards">${p.projects.filter((x) => x.theme === t).map((x) => `
-        <article class="card proj">
-          <div class="proj-top">
-            <span class="proj-num">${String(++n).padStart(2, '0')}</span>
-            <span class="status status-${slug(x.status)}">${esc(x.status)}</span>
-          </div>
-          ${diagram(x.diagram)}
-          <h4>${esc(x.title)}</h4>
-          ${x.keywords?.length ? `<p class="keywords">${x.keywords.map(esc).join(' · ')}</p>` : ''}
-          <p>${esc(x.text)}</p>
-          ${x.role ? `<p class="role"><b>My role:</b> ${esc(x.role)}</p>` : ''}
-          ${x.collab ? `<p class="collab">${esc(x.collabLabel || 'With')} ${x.collab}</p>` : ''}
-        </article>`).join('')}
+  $('#projectCards').innerHTML = `<div class="proj-list">${p.projects.map((x) => `
+    <article class="card proj" data-theme="${slug(x.theme)}">
+      ${x.diagram && DIAGRAMS[x.diagram] ? `<div class="proj-preview">${diagram(x.diagram)}</div>` : ''}
+      <div class="proj-body">
+        <div class="proj-top">
+          <span class="status status-${slug(x.status)}">${esc(x.status)}</span>
+          <span class="proj-theme">${esc(x.theme)}</span>
+        </div>
+        <h4>${esc(x.title)}</h4>
+        <p>${esc(x.text)}</p>
+        ${x.role ? `<p class="role"><b>My role:</b> ${esc(x.role)}</p>` : ''}
+        ${x.collab ? `<p class="collab">${esc(x.collabLabel || 'With')} ${x.collab}</p>` : ''}
+        ${x.keywords?.length ? `<p class="keywords">${x.keywords.map((k) => `<span>${esc(k)}</span>`).join('')}</p>` : ''}
       </div>
-    </div>`).join('');
+    </article>`).join('')}
+  </div>`;
   externalize($('#projectCards'));
+
+  const btns = [...document.querySelectorAll('.proj-filter button')];
+  btns.forEach((b) => b.addEventListener('click', () => {
+    btns.forEach((o) => o.classList.toggle('active', o === b));
+    document.querySelectorAll('.proj-list .proj').forEach((c) => {
+      c.hidden = b.dataset.theme !== '*' && c.dataset.theme !== b.dataset.theme;
+    });
+  }));
 }
 
 // Repos come from data/github.json, refreshed daily (pinned repos need GraphQL + a token)

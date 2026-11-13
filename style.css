@@ -292,22 +292,51 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
 @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
 
-/* research projects: themes, numbered cards, status, schematic thumbnails */
-.proj-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-bottom: 28px; }
+/* research projects: theme filter + horizontal cards (after roydipta.com Featured Publications) */
+.proj-summary { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin-bottom: 22px; }
 .proj-stats { margin: 0; color: var(--muted); font-size: 14.5px; }
 .proj-stats b { color: var(--warm); font-weight: 700; }
-.proj-jump { display: flex; flex-wrap: wrap; gap: 8px; }
-.proj-jump a {
-  display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; font-size: 13.5px; color: var(--text);
-  border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+.proj-filter { display: flex; flex-wrap: wrap; gap: 8px; }
+.proj-filter button {
+  padding: 6px 14px; font: 500 13px var(--sans); color: var(--muted); cursor: pointer; line-height: 1.4;
+  border: 1px solid var(--line); border-radius: 999px; background: transparent;
+  transition: background-color .15s, color .15s, border-color .15s;
 }
-.proj-jump a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
-.proj-jump span, .theme-title span { font: 700 12px var(--mono); color: var(--warm); }
-.proj-jump em { font: 500 12px var(--mono); font-style: normal; color: var(--faint); }
-.theme + .theme { margin-top: 34px; }
-.theme-title { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; font-size: 18px; font-weight: 600; }
-.theme .cards { grid-template-columns: repeat(2, 1fr); }
-@media (max-width: 760px) { .theme .cards { grid-template-columns: 1fr; } svg.thumb { height: auto; aspect-ratio: 240 / 96; } }
+.proj-filter button:hover { border-color: var(--accent); color: var(--accent); }
+.proj-filter button.active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.proj-list { display: flex; flex-direction: column; gap: 14px; }
+.proj-list .proj { flex-direction: row; align-items: center; gap: 22px; padding: 16px 20px; }
+.proj-list .proj:hover { transform: translateY(-2px); }
+.proj-list .proj[hidden] { display: none; }
+.proj-preview { flex: 0 0 34%; max-width: 300px; }
+.proj-preview svg.thumb { height: auto; aspect-ratio: 240 / 96; transition: transform .2s; }
+.proj:hover .proj-preview svg.thumb { transform: scale(1.03); }
+.proj-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px; }
+.proj-top { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.proj-theme { font: 500 12px var(--mono); color: var(--faint); }
+.status {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px;
+  font: 500 11.5px var(--mono); letter-spacing: .03em; background: var(--accent-soft); color: var(--accent);
+}
+.status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.status-ongoing::before { animation: pulse 2s ease-in-out infinite; }
+.status-inpreparation { background: color-mix(in srgb, var(--warm) 14%, transparent); color: var(--warm); }
+.status-completed { background: var(--surface-2); color: var(--muted); }
+@keyframes pulse { 50% { opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .status-ongoing::before { animation: none; } .proj:hover .proj-preview svg.thumb { transform: none; } }
+.proj h4 { font-size: 17px; font-weight: 600; }
+.proj-list .proj .collab { margin-top: 0; padding-top: 0; border-top: 0; }
+.proj .keywords { display: flex; flex-wrap: wrap; gap: 6px; }
+.proj .keywords span {
+  padding: 2px 8px; font: 500 11.5px var(--mono); color: var(--muted);
+  border: 1px solid var(--line); border-radius: 4px;
+}
+.proj .role { color: var(--text); font-size: 14px; }
+@media (max-width: 700px) {
+  .proj-list .proj { flex-direction: column; align-items: stretch; gap: 12px; }
+  .proj-preview { max-width: none; }
+}
+svg.thumb { height: auto; aspect-ratio: 240 / 96; } }
 .proj-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .proj-num { font: 600 13px var(--mono); color: var(--faint); }
 .status {
