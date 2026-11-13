@@ -1,39 +1,43 @@
 /* ---------- tokens ---------- */
-/* Navy & gold: institutional, confident; gold marks metrics */
+/* Close to roydipta.com: grey page, white cards, one blue accent, Lora + Roboto.
+   Gold (--warm) kept only for small highlights (metrics, seeking badge, numbers). */
 :root {
-  --bg: #ffffff;
+  --bg: #f8f9fa;
   --surface: #ffffff;
-  --surface-2: #f3f6fb;
-  --text: #0b1f3a;
-  --muted: #44546a;
-  --faint: #7a889c;
-  --line: #e1e7f0;
-  --accent: #0b3d91;
-  --accent-2: #1d5fd1;
-  --accent-soft: #eaf1fc;
+  --surface-2: #f1f3f5;
+  --text: #212529;
+  --muted: #555b61;
+  --faint: #868c92;
+  --line: #e2e5e9;
+  --accent: #2560b1;
+  --accent-2: #2f6cc0;
+  --accent-soft: #e9f0fa;
   --accent-ink: #ffffff;
   --warm: #b8860b;
   --grid: transparent;
-  --shadow: 0 1px 2px rgba(11, 31, 58, .05), 0 10px 28px -14px rgba(11, 31, 58, .25);
-  --radius: 14px;
-  --serif: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --shadow: 0 2px 5px rgba(0,0,0,.1), 0 5px 13px rgba(0,0,0,.065);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 3px 7px rgba(0,0,0,.045);
+  --radius: 8px;
+  --serif: 'Lora', Georgia, serif;
+  --sans: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, monospace;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0a1424; --surface: #0f1d33; --surface-2: #13233d; --text: #e6edf7; --muted: #a3b1c6;
-    --faint: #6f809a; --line: #1f3150; --accent: #7fb0ff; --accent-2: #a9c8ff; --accent-soft: #14284a;
-    --accent-ink: #071222; --warm: #e0b44c; --grid: transparent;
-    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px -12px rgba(0,0,0,.6); color-scheme: dark;
+    --bg: #1c1c1d; --surface: #212529; --surface-2: #2a2f34; --text: #dadada; --muted: #adb1b6;
+    --faint: #80858b; --line: #363b41; --accent: #79a9ec; --accent-2: #8fb8f0; --accent-soft: #1f2e44;
+    --accent-ink: #1c1c1d; --warm: #e0b44c; --grid: transparent;
+    --shadow: 0 2px 6px rgba(0,0,0,.5), 0 4px 12px rgba(0,0,0,.4);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.5); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0a1424; --surface: #0f1d33; --surface-2: #13233d; --text: #e6edf7; --muted: #a3b1c6;
-  --faint: #6f809a; --line: #1f3150; --accent: #7fb0ff; --accent-2: #a9c8ff; --accent-soft: #14284a;
-  --accent-ink: #071222; --warm: #e0b44c; --grid: transparent;
-  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px -12px rgba(0,0,0,.6); color-scheme: dark;
+  --bg: #1c1c1d; --surface: #212529; --surface-2: #2a2f34; --text: #dadada; --muted: #adb1b6;
+  --faint: #80858b; --line: #363b41; --accent: #79a9ec; --accent-2: #8fb8f0; --accent-soft: #1f2e44;
+  --accent-ink: #1c1c1d; --warm: #e0b44c; --grid: transparent;
+  --shadow: 0 2px 6px rgba(0,0,0,.5), 0 4px 12px rgba(0,0,0,.4);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4), 0 1px 3px rgba(0,0,0,.5); color-scheme: dark;
 }
 
 /* ---------- base ---------- */
@@ -105,12 +109,12 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   padding: 40px 0 8px;
 }
 .sidecard {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
   padding: 28px; box-shadow: var(--shadow);
 }
 .id { display: flex; flex-direction: column; gap: 16px; align-items: center; text-align: center; }
 .id img { width: 212px; height: 212px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); flex-shrink: 0;
-  box-shadow: 0 0 0 3px var(--accent), 0 12px 28px -10px rgba(55, 48, 163, .45); }
+  box-shadow: 0 0 0 3px var(--accent), 0 12px 28px -10px rgba(0, 0, 0, .25); }
 .id h1 { white-space: nowrap; font: 700 30px/1.1 var(--serif); letter-spacing: -.01em; }
 .position { margin: 8px 0 0; font-size: 15px; line-height: 1.45; color: var(--muted); }
 .email {
@@ -284,7 +288,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
   transition: transform .2s, border-color .2s, box-shadow .2s;
 }
-.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: var(--shadow); }
+.card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: var(--shadow); }
 .card h3 { font-size: 17px; font-weight: 600; }
 .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
 .card .collab { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); font-size: 13.5px; }
@@ -418,28 +422,26 @@ svg.thumb {
 .footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 /* ---------- academic theme accents ---------- */
-.lead strong, .section-title span {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
+.lead strong, .section-title span { color: var(--accent); }
 .section-title span { font-weight: 700; }
-.section-title { letter-spacing: -.025em; }
-.id h1, .contact h2, .block-title { letter-spacing: -.025em; }
+.section-title { letter-spacing: 0; }
+.id h1, .contact h2, .block-title { letter-spacing: 0; }
 .mini-stats b, .stat .num { color: var(--warm); }
 .cites { color: var(--warm); }
 .tag, .side-title { color: var(--accent-2); }
 .sidecard { border-top: 3px solid var(--accent); }
+.card, .pub { box-shadow: var(--shadow-sm); }
 .pub { border-left: 3px solid var(--accent); }
 .pub-badge { background: var(--accent); color: var(--accent-ink); }
 .pub-badge b { color: var(--accent-ink); }
 .callout { text-align: left; border-left: 4px solid var(--accent); }
 .contact {
-  background: linear-gradient(135deg, #0b1f3a, #0b3d91); border: 0; color: #fff;
+  background: linear-gradient(135deg, #1b4a8c, #2560b1); border: 0; color: #fff;
 }
 .contact p { color: rgba(255,255,255,.85); }
-.contact .btn.primary { background: #fff; border-color: #fff; color: #0b3d91; }
-:root[data-theme="dark"] .contact { background: linear-gradient(135deg, #0f2a55, #1d4ed8); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .contact { background: linear-gradient(135deg, #0f2a55, #1d4ed8); } }
+.contact .btn.primary { background: #fff; border-color: #fff; color: #2560b1; }
+:root[data-theme="dark"] .contact { background: linear-gradient(135deg, #1f3550, #2b4f80); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .contact { background: linear-gradient(135deg, #1f3550, #2b4f80); } }
 
 /* buttons */
 .btn {
