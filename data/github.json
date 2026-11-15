@@ -1,7 +1,7 @@
 {
   "profile": {
     "login": "Rakib911Hossan",
-    "public_repos": 27,
+    "public_repos": 28,
     "followers": 5,
     "html_url": "https://github.com/Rakib911Hossan"
   },
@@ -15,13 +15,23 @@
   ],
   "repos": [
     {
+      "name": "scientific_paper_graph",
+      "url": "https://github.com/Rakib911Hossan/scientific_paper_graph",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "pushed_at": "2026-11-15T10:29:19Z",
+      "topics": []
+    },
+    {
       "name": "portfolio",
       "url": "https://github.com/Rakib911Hossan/portfolio",
       "description": "Personal research portfolio — rakibhossan.com",
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "pushed_at": "2026-11-13T10:47:35Z",
+      "pushed_at": "2026-11-14T10:02:28Z",
       "topics": []
     },
     {
@@ -288,5 +298,5 @@
       "topics": []
     }
   ],
-  "updated": "2026-11-14T10:02:06+00:00"
+  "updated": "2026-11-15T10:37:57+00:00"
 }
