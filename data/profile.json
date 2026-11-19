@@ -17,7 +17,7 @@
   "email": "rakib911hossan@gmail.com",
   "availability": "Graduating <b>Jan 2027</b> · actively seeking <b>PhD admission</b> (Fall 2027) in NLP &amp; LLMs. Professors with openings — please <a href=\"mailto:rakib911hossan@gmail.com\">reach out</a>, I'd love to talk.",
   "lead": "I work on large language models, NLP and multimodal AI. In my PhD, I want to study <strong>how LLMs can verify each step of their reasoning against evidence and revise their conclusions when that evidence changes</strong>, and <strong>how to train LLM agents with reinforcement learning when reliable rewards are scarce</strong>, without reinforcing their own mistakes. I want both to hold up beyond text, in high-stakes and low-resource settings like the medical speech and prescription images I work with now.",
-  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, where I work on agentic test-time reinforcement learning and lead a benchmark on clinically important errors in Bangla medical speech recognition. Before computing, I spent five years as a marine engineer on VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
+  "bio": "I'm an AI Researcher at <a href=\"https://www.pentabd.com/\">Penta Global Ltd.</a>, where I work on agentic test-time reinforcement learning and lead a benchmark on clinically important errors in Bangla medical speech recognition. Before computing, I spent over ten years in marine engineering (2012 to 2023), from academy training to the engine rooms of VLCC supertankers, where a wrong diagnosis has real consequences. That is why I care about AI systems that check their evidence. In 2023 I switched careers: I started a B.Sc. in CSE at BUBT and have kept a 4.00 CGPA while working full time.",
   "links": {
     "github": "Rakib911Hossan",
     "scholar": "-NhjHp8AAAAJ",
@@ -84,7 +84,7 @@
     {
       "role": "Junior Engineer",
       "org": "MT. XIDI · Seacon Star",
-      "dates": "Mar 2022 – Jan 2023",
+      "dates": "2022 – 2023",
       "where": "At sea",
       "marine": true,
       "points": [
@@ -94,7 +94,7 @@
     {
       "role": "Engine Cadet",
       "org": "ATLANTIC 1 · MT. ARTAVIL",
-      "dates": "Sep 2017 – Aug 2021",
+      "dates": "2017 – 2021",
       "where": "At sea",
       "marine": true,
       "points": [
@@ -117,8 +117,8 @@
   "background": [
     {
       "title": "From ship engine rooms to trustworthy AI",
-      "meta": "Merchant Navy · 2017 – 2023",
-      "html": "For five years I kept the engines of VLCC super tankers running — main engines, generators, boilers — where every fault has to be traced from its symptoms back to a root cause, and a wrong call at sea has real consequences. I bring the same habit to AI research: treat model outputs as claims that need evidence, and make systems reliable before making them impressive."
+      "meta": "Marine Engineering · 2012 – 2023",
+      "html": "I spent over ten years in marine engineering, from academy training to keeping the engines of VLCC super tankers running — main engines, generators, boilers — where every fault has to be traced from its symptoms back to a root cause, and a wrong call at sea has real consequences. I bring the same habit to AI research: treat model outputs as claims that need evidence, and make systems reliable before making them impressive."
     }
   ],
   "publications": [
