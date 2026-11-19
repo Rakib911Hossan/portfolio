@@ -80,7 +80,7 @@ function renderStats(p) {
 
 function renderNews(p) {
   const news = [...p.news].sort((a, b) => b.date.localeCompare(a.date));
-  const LIMIT = 4;
+  const LIMIT = 6;
   const draw = (all) => {
     $('#newsList').innerHTML = (all ? news : news.slice(0, LIMIT)).map((n) =>
       `<li><time>${fmtMonth(n.date)}</time><span>${n.icon ? n.icon + ' ' : ''}${n.html}</span></li>`).join('');

@@ -27,6 +27,10 @@
   },
   "news": [
     {
+      "date": "2026-08",
+      "html": "Joined <a href=\"https://avnbd.org/\">AVNBD</a> as an <strong>AI Engineer</strong>, building an LLM pipeline to extract and translate a large-scale human-rights dataset from a scanned Bangla source."
+    },
+    {
       "date": "2026-07",
       "html": "Now working mainly as a <strong>researcher</strong> on the Penta AI team: Bangla medical speech, medical prescriptions, and agentic test-time RL."
     },
